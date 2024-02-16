@@ -55,7 +55,7 @@ ROOT_URLCONF = 'InternetTechnologyGroup8.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Itech/InternetTechnologyGroup8/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

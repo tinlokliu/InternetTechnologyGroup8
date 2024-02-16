@@ -18,6 +18,6 @@ from django.urls import path
 from rango import views
 
 urlpatterns = [
-    path('', views.mainpage, name='index'),
+    path('', views.homepage, name='homepage'),
     path('admin/', admin.site.urls),
 ]
