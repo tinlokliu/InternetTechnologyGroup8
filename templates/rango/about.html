@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+</head>
+
+<body>
+    <h1>About Us</h1>
+    <p>This is the about us page content.</p>
+    <a href="/">Back to Home</a>
+
+    <!-- Add ChefBot icon at the bottom right corner -->
+<div id="chefbot-icon">
+    <img src="{% static 'images/chefbot_icon.png' %}" alt="ChefBot">
+</div>
+
+<!-- Add expandable textbox for user input -->
+<div id="chefbot-textbox" style="display: none;">
+    <textarea id="user-question" rows="4" cols="50" placeholder="Ask ChefBot anything..."></textarea>
+    <button id="submit-question">Ask</button>
+</div>
+
+</body>
+
+</html>
