@@ -1,0 +1,204 @@
+body {
+    font-family: "Molengo";
+}
+
+
+#title {
+    background-color: #FFFFFF;
+}
+
+
+.container-fluid {
+    padding: 3% 15%;
+}
+
+/* .navbar-container {
+    padding: 3% 15%; 
+} */
+
+h1 {
+    font-family: "Montagu Slab";
+    font-size: 3.8rem;
+    font-weight:900;
+    line-height: 1.1;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #007F47;
+}
+
+h2 {
+    font-family: "Montagu Slab";
+
+    font-weight:900;
+    line-height: 1.1;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #000000;
+}
+
+
+h6 {
+    font-family: "Molengo", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-bottom: 20px;
+}
+
+p {
+    color: #8f8f8f;
+    font-size: medium;
+}
+
+.welcome-text {
+    padding-right: 50px;
+}
+
+.image-container {
+    padding-left: 50px;
+}
+
+.browse-text h2, .browse-text p {
+    text-align: center;
+
+}
+
+.browse-text p {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding-bottom: 75px;
+}
+
+.category-box {
+    padding: 10px 50px 50px 50px;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    padding-bottom: 2.5rem;
+    margin-left: 80px;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.nav-item {
+    padding: 0 16px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Molengo";
+    font-weight: 400;
+    color: #000000;
+}
+
+
+/* Title image */
+
+.title-image {
+    width: 60%;
+    transform: rotate(25deg);
+}
+
+
+/* Search bar */
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make the search bar span the entire width */
+}
+
+.search__input {
+    flex: 1; /* Make the input take up remaining space */
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    transition: all ease-in-out .5s;
+}
+
+.search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-left: -3rem; /* Adjust the margin to overlap the button with the input */
+}
+
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}
+
+
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f0eeee;
+  }
+  
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+  
+
+/* Download buttons */
+
+/* .download-button {
+    margin: 5% 3% 5% 0%;
+} */
+
+
+/* Feature Section */
+
+#categories {
+    background-color: #FAF9FB;
+    padding: 0% 15%;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 5%;
+}
+
+
+
+
+/* .icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+
+.icon:hover {
+    color: #ff4c68; 
+} */
+
+
+
