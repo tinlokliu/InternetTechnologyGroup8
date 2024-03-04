@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('about/', views.about, name='about'),
     path('api/openai/', views.openai_api, name='openai_api'),
+    path('profile/', views.profile, name='profile'),
 ]

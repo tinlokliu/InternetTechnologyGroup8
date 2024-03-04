@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="./css/homepage-style1.css">
+    <link rel="stylesheet" href="static/css/homepage-style1.css">
 
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montagu Slab' rel='stylesheet'>
@@ -52,7 +52,7 @@
                             <a class="nav-link" href="">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">About Us</a>
+                            <a class="nav-link" href="{%url 'rango:about' %}">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Share Receipe</a>
@@ -61,8 +61,9 @@
                             <a class="nav-link" href="">Heart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Profile</a>
+                            <a class="nav-link" href="{% url 'rango:profile' %}">Profile</a>
                         </li>
+                    </ul>
                 </div>
             </nav>
     </section>

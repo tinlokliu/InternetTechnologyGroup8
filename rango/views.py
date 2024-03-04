@@ -10,6 +10,9 @@ def homepage(request):
 def about(request):
     return render(request, 'rango/about.html')
 
+def profile(request):
+    return render(request, 'rango/profile.html')
+
 @csrf_exempt
 def openai_api(request):
     if request.method == 'POST':
