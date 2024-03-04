@@ -1,0 +1,55 @@
+body {
+    font-family: "Molengo", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007F47;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.main {
+    text-align: center;
+    padding: 20px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+.option1, .option2, .option3, .option4 {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.option1:hover, .option2:hover, .option3:hover, .option4:hover {
+    text-decoration: underline;
+}

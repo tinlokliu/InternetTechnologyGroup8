@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Profile</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+    </head>
+
+    <body>
+        <h1>Profile Page</h1>
+        <div>
+            This is the view for the profile section of the website<br />
+        </div>
+        <div>
+            <a href="{% url 'rango:about' %}">About</a><br />
+            <a href="/">Homepage</a><br />
+        </div>
+
+        <main>
+                    <!-- Profile Image -->
+        <img src="" alt="profilepicture" class="image">
+
+        <!-- Profile Options -->
+        <div class="options">
+            <div class="option1">Username</div>
+            <div class="option2">Change Password</div>
+            <div class="option3">DELETE ACCOUNT</div>
+            <div class ="option4">Sign Out</div>
+        </main>
+    </body>
+
+
+</html>
