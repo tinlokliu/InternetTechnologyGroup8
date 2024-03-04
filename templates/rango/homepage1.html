@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,9 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="./css/homepage-style1.css">
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css">
+    {% endblock %}
 
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montagu Slab' rel='stylesheet'>
@@ -28,7 +31,9 @@
         rel="stylesheet">
 
     <!-- Fontawesome icons -->
+    {% block js %}
     <script src="https://kit.fontawesome.com/8a83b1732f.js" crossorigin="anonymous"></script>
+    {% endblock %}
 
 </head>
 
@@ -75,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-6 welcome-text">
                     <h1>Welcome to Cookify</h1>
-                    <p>Welcome to our tasty recipe hub! Discover delicious dishes for every
+                    <p>Welcome to our recipe hub! Discover delicious dishes for every
                         craving. Whether you're a pro cook or new to the kitchen, get
                         ready to make yummy meals with us. Let's cook up some fun
                         together!</p>
@@ -117,109 +122,111 @@
             <div class="row">
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1506280754576-f6fa8a873550?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Quick & Easy</p>
+                            <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1692071097529-320eb2b32292?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Italian Cuisine</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1547496502-affa22d38842?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Vegeterian</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1602273660127-a0000560a4c1?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Asian Cuisine</p>
+                            <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1608500218987-0f2b3be34b47?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Soups and Stews</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Mexican Cuisine</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Mediterranean Cuisine</p>
+                            <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1632737173811-cfc7bf387a12?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Healthy Eating</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Category Image" class="card-image">
+                        <div class="card-details">
+                            <p class="text-title">Breakfast & Brunch</p>
                         </div>
+                        <button class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
         </div>
     </section>
 

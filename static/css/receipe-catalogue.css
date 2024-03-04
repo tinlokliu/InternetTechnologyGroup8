@@ -1,0 +1,186 @@
+/* Navigation Bar */
+
+.navbar {
+    padding-bottom: 1.5rem;
+    margin-left: 0px;
+    background-color: #007F47;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.nav-item {
+    padding: 0 16px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Molengo";
+    font-weight: 400;
+    color: #ffffff;
+}
+
+
+
+
+/* Search bar */
+.search-container {
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 100%;
+    margin-top: 0px; /* Adjust as needed */
+    margin-bottom: 0px;
+    background-color: #007F47;
+    height: 100px;
+   
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* Make the search bar span the entire width */
+}
+
+.search__input {
+    width: 350px;
+    /* Make the input take up remaining space */
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    transition: all ease-in-out .5s;
+}
+
+
+
+
+.search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-left: -3rem;
+    /* Adjust the margin to overlap the button with the input */
+}
+
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}
+
+
+.search__input:hover,
+.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+.search__input:focus+.search__button {
+    background-color: #f0eeee;
+}
+
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* Dropdown filter */
+.filter-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px; /* Adjust spacing */
+}
+
+.filter {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Remove border */
+    cursor: pointer;
+    background-color: #f4f2f2; /* Change background color */
+    color: white; /* Change text color */
+    font-size: 1.2rem; /* Adjust font size */
+    transition: all 0.3s;
+    position: relative; /* Add this line */
+}
+
+.filter:hover {
+    background-color: #043b23; /* Darken background color */
+}
+
+.filter:hover svg {
+    fill: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px; /* Add border radius */
+}
+
+.dropdown-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown-content input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Show the dropdown content when the filter button is clicked */
+.filter-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+  
+  
+
+
+
+
+
+
+/* View All Receipes */
+
+.all-receipes-container {
+    padding-top: 30px;
+}
+
+#all-receipes {
+    background-color: #FAF9FB;
+}
+
+.receipe-box {
+    padding: 10px 50px 50px 50px;
+}
+

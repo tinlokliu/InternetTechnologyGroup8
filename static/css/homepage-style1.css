@@ -65,12 +65,13 @@ p {
 .browse-text p {
     max-width: 600px; 
     margin: 0 auto; 
-    padding-bottom: 75px;
+    padding-bottom: 25px;
 }
 
 .category-box {
-    padding: 10px 50px 50px 50px;
+    padding: 30px 30px 0px 30px; /* Adjust right and left padding to increase space */
 }
+
 
 
 /* Navigation Bar */
@@ -96,6 +97,11 @@ p {
     font-weight: 400;
     color: #000000;
 }
+
+.nav-link:hover {
+    color: #007F47; 
+}
+
 
 
 /* Title image */
@@ -183,22 +189,76 @@ p {
     padding: 0% 15%;
 }
 
-.feature-box {
+/* .feature-box {
     text-align: center;
-    padding: 5%;
-}
-
-
-
-
-/* .icon {
-    color: #ef8172;
-    margin-bottom: 1rem;
-}
-
-.icon:hover {
-    color: #ff4c68; 
+    padding: 45%;
 } */
 
+.card {
+    width: 310px;
+    height: 300px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    font-family: "Molengo", sans-serif;
+   }
 
-
+   .card-image {
+    width: 100%; /* Make the image take up the full width of the card */
+    height: 85%; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 20px; /* Adjust border radius to match the card */
+    margin-bottom: 15px;
+    margin-top: 0px; /* Add some space between the image and text */
+}
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+    font-family: "Molengo", sans-serif;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #007F47;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: "Montagu Slab";
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #007F47;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
