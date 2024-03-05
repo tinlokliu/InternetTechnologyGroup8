@@ -1,0 +1,98 @@
+/* Navigation Bar */
+
+.navbar {
+    padding-bottom: 2.5rem;
+   padding-right: 20px;
+    /*margin-left: 80px;*/
+}
+
+/* .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: 700;
+} */
+
+.nav-item {
+    padding: 0 12px;
+}
+
+.navbar .nav-item-img {
+    padding: 0 10px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Molengo";
+    font-weight: 800;
+    color: #000000;
+  
+}
+
+.nav-link:hover {
+    color: #007F47; 
+}
+
+
+.heart-icon {
+    height: 30px; 
+    /* padding-right: 14px */
+}
+
+.profile-icon {
+    height: 30px
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Initially hide hover icons */
+.icon-container .heart-icon-hover,
+.icon-container .profile-icon-hover {
+    display: none;
+}
+
+/* Show hover icons on hover */
+.icon-container:hover .heart-icon {
+    display: none;
+}
+
+.icon-container:hover .heart-icon-hover {
+    display: inline-block;
+}
+
+.icon-container:hover .profile-icon {
+    display: none;
+}
+
+.icon-container:hover .profile-icon-hover {
+    display: inline-block;
+}
+
+
+
+/* .profile-icon {
+    padding: 0 8px 0px 3px;
+} */
+
+
+
+/* .nav-link img {
+    width: 5px; 
+    height: 5px; 
+    vertical-align: middle; 
+    margin-right: 0.2em; 
+} */
+
+/* .heart-icon {
+    width: 5px; 
+    height: 5px; 
+} */
+
+
