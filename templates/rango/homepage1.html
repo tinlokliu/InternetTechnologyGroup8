@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+
     <title>Cookify</title>
 
     <!-- Bootstrap setup -->
@@ -14,13 +15,11 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS Stylesheets -->
-<<<<<<< HEAD
     {% block css %}
     <link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css">
     {% endblock %}
-=======
     <link rel="stylesheet" href="static/css/homepage-style1.css">
->>>>>>> 6a5deced9754dbf06514368e0f40ca24ebeeba44
+
 
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montagu Slab' rel='stylesheet'>
@@ -39,9 +38,47 @@
     <script src="https://kit.fontawesome.com/8a83b1732f.js" crossorigin="anonymous"></script>
     {% endblock %}
 
+        <!-- Custom styles -->
+    <style>
+        /* CSS for positioning ChefBot icon */
+        #chefbot-icon {
+            position: fixed;
+            bottom: -117px;
+            right: -80px;
+           /*margin-bottom: 20px; /* Optional: Add margin for spacing */
+            /*margin-right: 20px; /* Optional: Add margin for spacing */
+            transform: scale(0.15); /* Make the icon smaller */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            z-index: 1000;
+        }
+
+        /* CSS for styling the textbox */
+        #chefbot-textbox {
+            position: fixed;
+            bottom: -80px;
+            right: -60px;
+            transform: scale(0.6);
+            display: none;
+            margin-bottom: 90px;
+            z-index: 1000;
+        }
+        
+    </style>
+        
+    </style>
 </head>
 
 <body>
+     <!-- Add ChefBot icon at the bottom right corner -->
+     <div id="chefbot-icon" onclick="toggleTextBox()">
+        <img src="{% static 'images/chefbot_icon.png' %}" alt="ChefBot">
+    </div>
+
+    <!-- Add expandable textbox for user input -->
+    <div id="chefbot-textbox">
+        <textarea id="user-question" rows="4" cols="50" placeholder="Ask ChefBot anything..."></textarea>
+        <button id="submit-question" onclick="submitQuestion()">Ask</button>
+    </div>
 
     <section id="navbar">
         <div class="navbar-container">
@@ -223,19 +260,30 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
         </div>
     </section>
 
 
     </div>
-
+    
+    <script>
+        // Function to toggle visibility of textbox
+        function toggleTextBox() {
+            var textBox = document.getElementById("chefbot-textbox");
+            textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
+            // If textbox is visible, populate with default message
+            if (textBox.style.display == "block") {
+                document.getElementById("user-question").value = "Hi, I am ChefBot. How can I help?";
+            }
+        }
+    
+        // Function to handle submission of user question
+        function submitQuestion() {
+            var userQuestion = document.getElementById("user-question").value;
+            // Code for submitting question to server
+        }
+    
+    </script>
+    
 </body>
+</html>
