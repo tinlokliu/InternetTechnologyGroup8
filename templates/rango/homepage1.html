@@ -1,10 +1,10 @@
-{% extends 'rango/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
+
     <title>Cookify</title>
 
     <!-- Bootstrap setup -->
@@ -15,11 +15,9 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS Stylesheets -->
-
     {% block css %}
     <link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css">
     {% endblock %}
-
     <link rel="stylesheet" href="static/css/homepage-style1.css">
 
 
@@ -40,15 +38,39 @@
     <script src="https://kit.fontawesome.com/8a83b1732f.js" crossorigin="anonymous"></script>
     {% endblock %}
 
+        <!-- Custom styles -->
+    <style>
+        /* CSS for positioning ChefBot icon */
+        #chefbot-icon {
+            position: fixed;
+            bottom: -117px;
+            right: -80px;
+           /*margin-bottom: 20px; /* Optional: Add margin for spacing */
+            /*margin-right: 20px; /* Optional: Add margin for spacing */
+            transform: scale(0.15); /* Make the icon smaller */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            z-index: 1000;
+        }
+
+        /* CSS for styling the textbox */
+        #chefbot-textbox {
+            position: fixed;
+            bottom: -80px;
+            right: -60px;
+            transform: scale(0.6);
+            display: none;
+            margin-bottom: 90px;
+            z-index: 1000;
+        }
+        
+    </style>
+        
+    </style>
 </head>
 
-
-
-{% block content-it %}
 <body>
-<<<<<<< HEAD
-    <!-- Add ChefBot icon at the bottom right corner -->
-    <div id="chefbot-icon" onclick="toggleTextBox()">
+     <!-- Add ChefBot icon at the bottom right corner -->
+     <div id="chefbot-icon" onclick="toggleTextBox()">
         <img src="{% static 'images/chefbot_icon.png' %}" alt="ChefBot">
     </div>
 
@@ -57,70 +79,6 @@
         <textarea id="user-question" rows="4" cols="50" placeholder="Ask ChefBot anything..."></textarea>
         <button id="submit-question" onclick="submitQuestion()">Ask</button>
     </div>
-
-    <script>
-        // Function to toggle visibility of textbox
-        function toggleTextBox() {
-            var textBox = document.getElementById("chefbot-textbox");
-            textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
-            // If textbox is visible, populate with default message
-            if (textBox.style.display == "block") {
-                document.getElementById("user-question").value = "Hi, I am ChefBot. How can I help?";
-            }
-        }
-
-        // Function to handle submission of user question
-        function submitQuestion() {
-            var userQuestion = document.getElementById("user-question").value;
-            fetch('/api/openai', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ question: userQuestion }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Display the response from OpenAI API
-                console.log('Response:', data);
-                // Here you can do something with the response, such as displaying it on the webpage
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Handle errors here
-            });
-            // Clear the textarea after submission
-            document.getElementById("user-question").value = "";
-        }
-    </script>
-    <style>
-        /* CSS for positioning ChefBot icon */
-        #chefbot-icon {
-            position: fixed;
-            bottom: 0px;
-            right: 0px;
-            transform: scale(0.2); /* Make the icon smaller */
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
-    
-        /* CSS for styling the textbox */
-        #chefbot-textbox {
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            transform: scale(0.7);
-            display: none;
-            margin-bottom: 90px;
-        }
-    </style>
-
-
-
-
-
-
-
-=======
 
     <section id="navbar">
         <div class="navbar-container">
@@ -155,7 +113,6 @@
                 </div>
             </nav>
     </section>
->>>>>>> 27204d7d4c6899047e37fa6c1ce75a0ce3d5d2fc
 
 
     <section id="title">
@@ -305,15 +262,28 @@
             </div>
         </div>
     </section>
+
+
     </div>
-<<<<<<< HEAD
+    
+    <script>
+        // Function to toggle visibility of textbox
+        function toggleTextBox() {
+            var textBox = document.getElementById("chefbot-textbox");
+            textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
+            // If textbox is visible, populate with default message
+            if (textBox.style.display == "block") {
+                document.getElementById("user-question").value = "Hi, I am ChefBot. How can I help?";
+            }
+        }
+    
+        // Function to handle submission of user question
+        function submitQuestion() {
+            var userQuestion = document.getElementById("user-question").value;
+            // Code for submitting question to server
+        }
+    
+    </script>
+    
 </body>
-{% endblock %}
-
-
-
-
-=======
-
-</body>
->>>>>>> 27204d7d4c6899047e37fa6c1ce75a0ce3d5d2fc
+</html>
