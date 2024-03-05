@@ -7,6 +7,9 @@ body {
     background-color: #FFFFFF;
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1054px
+}
 
 .container-fluid {
     padding: 3% 15%;
@@ -75,10 +78,10 @@ p {
 
 
 /* Navigation Bar */
-
+/* 
 .navbar {
     padding-bottom: 2.5rem;
-    /*margin-left: 80px;*/
+   
 }
 
 .navbar-brand {
@@ -100,7 +103,7 @@ p {
 
 .nav-link:hover {
     color: #007F47; 
-}
+} */
 
 
 
@@ -186,7 +189,7 @@ p {
 
 #categories {
     background-color: #FAF9FB;
-    padding: 0% 15%;
+    padding: 0% 0%;
 }
 
 /* .feature-box {
