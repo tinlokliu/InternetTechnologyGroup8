@@ -1,3 +1,4 @@
+{% extends 'rango/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -37,43 +38,9 @@
 
 </head>
 
+{%block content-it%}
+
 <body>
-
-
-    <section id="navbar">
-        <div class="navbar-container">
-
-            <!-- Nav Bar -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <!-- <a class="navbar-brand" href="">Cookify</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Share Receipe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Heart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Profile</a>
-                        </li>
-                </div>
-            </nav>
-    </section>
-
-
     <section id="search">
         <div class="search-container">
             <div class="search-bar">
@@ -117,7 +84,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -129,7 +96,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -141,7 +108,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -153,7 +120,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -168,7 +135,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -180,7 +147,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -192,7 +159,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -204,7 +171,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -219,7 +186,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -231,7 +198,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -243,7 +210,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -255,7 +222,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -270,7 +237,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -282,7 +249,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -294,7 +261,7 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
@@ -306,22 +273,13 @@
                             <h5 class="card-title">Card title 1</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
-                            <a href="{% url 'rango:receipe-catalogue' %}" class="btn btn-primary">About</a><br />
+                            <a href="#" class="btn btn-primary">About</a><br />
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-
-
-
-
-    
 </body>
+{% endblock %}

@@ -8,4 +8,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('api/openai/', views.openai_api, name='openai_api'),
     path('profile/', views.profile, name='profile'),
+    path('catalogue/', views.catalogue, name='catalogue'),
 ]
