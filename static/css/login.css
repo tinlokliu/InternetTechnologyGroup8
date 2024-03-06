@@ -1,0 +1,161 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 767px;
+}
+
+.u-section-1 .u-list-1 {
+  margin-bottom: 0;
+  margin-top: 58px;
+}
+
+.u-section-1 .u-repeater-1 {
+  grid-gap: 10px 10px;
+  grid-auto-columns: 100%;
+  min-height: 375px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: -327px;
+  margin-bottom: 38px;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 623px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 376px;
+  height: 376px;
+  background-image: url("login.jpg");
+  background-position: 50% 50%;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 55px auto 0;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 623px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-1 .u-form-1 {
+  height: 434px;
+  width: 510px;
+  margin: 0;
+}
+
+.u-section-1 .u-form-group-3 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-btn-1 {
+  --radius: 50px;
+  padding: 10px 147px 10px 145px;
+}
+
+.u-section-1 .u-btn-2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: normal;
+  margin: 4px auto 0;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-3 {
+  margin: 30px auto 0;
+  padding: 0;
+}
+.error-message {
+  color: red; 
+  font-size: 1em;
+  margin-top: 5px; /* 在错误信息与输入框之间添加一些间隔 */
+  display: none; /* 默认不显示错误信息，只有在发生错误时才显示 */
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 658px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    grid-auto-columns: NaN%;
+    grid-template-columns: repeat(undefined, NaN%);
+    min-height: NaNpx;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 514px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 514px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 410px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 538px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    grid-auto-columns: 100%;
+    grid-template-columns: 100%;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 394px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 1414px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 591px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 976px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 372px;
+  }
+}
