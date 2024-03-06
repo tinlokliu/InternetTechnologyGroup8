@@ -13,6 +13,9 @@ def about(request):
 def profile(request):
     return render(request, 'rango/profile.html')
 
+def catalogue(request):
+    return render(request, 'rango/receipe-catalogue.html')
+
 @csrf_exempt
 def openai_api(request):
     if request.method == 'POST':
