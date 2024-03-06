@@ -1,6 +1,6 @@
 /* Navigation Bar */
 
-.navbar {
+/* .navbar {
     padding-bottom: 1.5rem;
     margin-left: 0px;
     background-color: #007F47;
@@ -21,7 +21,7 @@
     font-family: "Molengo";
     font-weight: 400;
     color: #ffffff;
-}
+} */
 
 
 
@@ -35,7 +35,7 @@
     width: 100%;
     margin-top: 0px; /* Adjust as needed */
     margin-bottom: 0px;
-    background-color: #007F47;
+    background-color: #ffffff;
     height: 100px;
    
 }
