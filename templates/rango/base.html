@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Home</a>
+                            <a class="nav-link" href="{% url 'rango:homepage' %}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{%url 'rango:about' %}">About Us</a>
@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li class="nav-item-img">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{%url 'rango:profile' %}">
                                 <div class="icon-container" id="profile-icon-container">
                                     <img class="profile-icon" src="{% static 'images/avatar.png' %}" alt="Profile Icon">
                                     <img class="profile-icon-hover" src="{% static 'images/avatar-hover.png' %}" alt="Profile Icon Hover">
@@ -81,8 +81,9 @@
                     </ul>
                 </div>
             </nav>
+            
     </section>
-    
+
 </body>
 
 {% block content-it %}
