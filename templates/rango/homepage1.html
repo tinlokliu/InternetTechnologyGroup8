@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css"> <!-- Ensure homepage-style1.css is imported after base.css -->
 {% endblock %}
 
-
 {% block content-it %}
 <body>
     <section id="title">
@@ -24,8 +23,8 @@
 
                     <!-- Simple Search Bar -->
                     <div class="search">
-                        <input type="text" class="search__input" placeholder="Search for recipes...">
-                        <button class="search__button">
+                        <input type="text" id="search" class="search__input" placeholder="Search for recipes...">
+                        <button class="search__button"  onclick="redirectToAboutPage()">
                             <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <g>
                                     <path
@@ -65,7 +64,7 @@
                             <p class="text-title">Quick & Easy</p>
                             <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='salad' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -75,7 +74,7 @@
                         <div class="card-details">
                             <p class="text-title">Italian Cuisine</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='italian' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -85,7 +84,7 @@
                         <div class="card-details">
                             <p class="text-title">Vegeterian</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='vegan' class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,7 @@
                             <p class="text-title">Asian Cuisine</p>
                             <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='asian' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -108,7 +107,7 @@
                         <div class="card-details">
                             <p class="text-title">Soups and Stews</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='soups' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -118,7 +117,7 @@
                         <div class="card-details">
                             <p class="text-title">Mexican Cuisine</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='mexican' class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
@@ -131,7 +130,7 @@
                             <p class="text-title">Mediterranean Cuisine</p>
                             <!-- <p class="text-body">Here are the details of the card</p> -->
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='mediterranean' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -141,7 +140,7 @@
                         <div class="card-details">
                             <p class="text-title">Healthy Eating</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='vegetarian' class="card-button">View Receipes</button>
                     </div>
                 </div>
                 <div class="col-lg-4 category-box">
@@ -151,12 +150,56 @@
                         <div class="card-details">
                             <p class="text-title">Breakfast & Brunch</p>
                         </div>
-                        <button class="card-button">View Receipes</button>
+                        <button id='Breakfast,Brunch' class="card-button">View Receipes</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     </div>
+
+    <script>
+        function redirectToAboutPage() {
+            const query = document.getElementById('search').value;
+            sessionStorage.setItem('query', JSON.stringify(query));
+            window.location.href = '{% url "rango:catalogue" %}';
+        }
+        document.getElementById('salad').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('salad'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('italian').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('italian'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('vegan').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('vegan'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('asian').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('asian'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('soups').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('soups'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('mexican').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('mexican'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('mediterranean').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('mediterranean'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('vegetarian').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('vegetarian'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+        document.getElementById('Breakfast,Brunch').addEventListener('click', function() {
+            sessionStorage.setItem('query', JSON.stringify('Breakfast,Brunch'));
+            window.location.href = '{% url "rango:catalogue" %}';
+        });
+    </script>
 </body>
 {% endblock %}
