@@ -27,7 +27,7 @@ SECRET_KEY = 'm0ox9a63*w(wusx)q3qof=bo$b$hqe$)vw$l!i1btr1z)x-z5@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://tinlok.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['tinlok.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
