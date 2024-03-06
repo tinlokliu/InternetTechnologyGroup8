@@ -1,37 +1,88 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
+{% extends 'rango/base.html' %}
+{% load static %}
 
-<head>
-    <title>About Us</title>
-    <style>
-        /* CSS for positioning ChefBot icon */
-        #chefbot-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            transform: scale(0.2); /* Make the icon smaller */
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
+<!-- CSS Stylesheets -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/about.css' %}" type="text/css">
+<!-- Ensure homepage-style1.css is imported after base.css -->
+{% endblock %}
 
-        /* CSS for styling the textbox */
-        #chefbot-textbox {
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            transform: scale(0.7);
-            display: none;
-            margin-bottom: 90px;
-        }
-    </style>
-</head>
+
+{% block content-it %}
+<style>
+    /* CSS for positioning ChefBot icon */
+    #chefbot-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        transform: scale(0.2);
+        /* Make the icon smaller */
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+    }
+
+    /* CSS for styling the textbox */
+    #chefbot-textbox {
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        transform: scale(0.7);
+        display: none;
+        margin-bottom: 90px;
+    }
+</style>
 
 <body>
-    <h1>About Us</h1>
+    <!-- <h1>About Us</h1>
     <p>This is the about us page content.</p>
     <a href="/">Back to Home</a><br />
-    <a href="{% url 'rango:profile' %}">Profile</a><br />
+    <a href="{% url 'rango:profile' %}">Profile</a><br /> -->
     
+    <section id="story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="centered-section">
+                        <h1>Our Story</h1>
+                        <p>Welcome to Cookify! Our journey began with a simple love for food and a
+                            passion for sharing delicious recipes. What started as a personal project
+                            has grown into a vibrant community of food enthusiasts, all united by the
+                            joy of cooking and exploring new flavors. Join us as we continue to inspire
+                            and connect through the art of culinary creation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="statistics">
+        <div class="container">
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="col d-flex align-items-start">
+                    <div>
+                        <h3 class="fs-2 text-body-emphasis">455 Recipes</h3>
+                        <p>Discover diverse recipes spanning various cuisines and dietary preferences</p>
+
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <div>
+                        <h3 class="fs-2 text-body-emphasis">10,000+ Cooks</h3>
+                        <p>Join a vibrant community of over 10,000 passionate cooks, sharing their culinary adventures.
+                        </p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <div>
+                        <h3 class="fs-2 text-body-emphasis">100+ Countries</h3>
+                        <p>Cookify has reached users from over 100 countries worldwide, bringing global flavors to
+                            kitchens everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Add ChefBot icon at the bottom right corner -->
     <div id="chefbot-icon" onclick="toggleTextBox()">
@@ -65,22 +116,21 @@
                 },
                 body: JSON.stringify({ question: userQuestion }),
             })
-            .then(response => response.json())
-            .then(data => {
-                // Display the response from OpenAI API
-                console.log('Response:', data);
-                // Here you can do something with the response, such as displaying it on the webpage
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Handle errors here
-            });
+                .then(response => response.json())
+                .then(data => {
+                    // Display the response from OpenAI API
+                    console.log('Response:', data);
+                    // Here you can do something with the response, such as displaying it on the webpage
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle errors here
+                });
             // Clear the textarea after submission
             document.getElementById("user-question").value = "";
         }
     </script>
 
 </body>
-
-</html>
+{% endblock %}
 
