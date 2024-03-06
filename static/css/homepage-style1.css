@@ -76,39 +76,6 @@ p {
 }
 
 
-
-/* Navigation Bar */
-/* 
-.navbar {
-    padding-bottom: 2.5rem;
-   
-}
-
-.navbar-brand {
-    font-family: "Ubuntu";
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.nav-item {
-    padding: 0 16px;
-}
-
-.nav-link {
-    font-size: 1.2rem;
-    font-family: "Molengo";
-    font-weight: 400;
-    color: #000000;
-}
-
-.nav-link:hover {
-    color: #007F47; 
-} */
-
-
-
-/* Title image */
-
 .title-image {
     width: 60%;
     transform: rotate(25deg);
@@ -172,30 +139,11 @@ p {
   
 
 
-
-
-
-
-  
-
-/* Download buttons */
-
-/* .download-button {
-    margin: 5% 3% 5% 0%;
-} */
-
-
-/* Feature Section */
-
 #categories {
     background-color: #FAF9FB;
     padding: 0% 0%;
 }
 
-/* .feature-box {
-    text-align: center;
-    padding: 45%;
-} */
 
 .card {
     width: 310px;
