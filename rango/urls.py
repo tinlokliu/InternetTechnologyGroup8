@@ -9,4 +9,6 @@ urlpatterns = [
     path('api/openai/', views.openai_api, name='openai_api'),
     path('profile/', views.profile, name='profile'),
     path('catalogue/', views.catalogue, name='catalogue'),
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
 ]

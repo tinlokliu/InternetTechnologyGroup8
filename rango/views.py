@@ -16,6 +16,12 @@ def profile(request):
 def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
+def login(request):
+    return render(request, 'rango/login.html')
+
+def signup(request):
+    return render(request, 'rango/login.html')
+
 @csrf_exempt
 def openai_api(request):
     if request.method == 'POST':

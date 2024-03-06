@@ -35,7 +35,55 @@
     <script src="https://kit.fontawesome.com/8a83b1732f.js" crossorigin="anonymous"></script>
     {% endblock %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        /* CSS for positioning ChefBot icon */
+        #chefbot-icon {
+            position: fixed;
+            bottom: -130px;
+            right: -140px;
+            transform: scale(0.12); /* Make the icon smaller */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            z-index: 1000;
+        }
+
+        /* CSS for styling the textbox */
+        #chefbot-textbox {
+            position: fixed;
+            bottom: -80px;
+            right: -100px;
+            transform: scale(0.55);
+            display: none;
+            margin-bottom: 90px;
+            z-index: 1000;
+        }
+
+    </style>
     
+         <!-- Add ChefBot icon at the bottom right corner -->
+         <div id="chefbot-icon" onclick="toggleTextBox()">
+            <img src="{% static 'images/chefbot_icon.png' %}" alt="ChefBot">
+        </div>
+    
+        <!-- Add expandable textbox for user input -->
+        <div id="chefbot-textbox">
+            <textarea id="user-question" rows="4" cols="50" placeholder="Ask ChefBot anything..."></textarea>
+            <button id="submit-question" onclick="submitQuestion()">Ask</button>
+        </div>
+
+        <script>
+            // Function to toggle visibility of textbox
+            function toggleTextBox() {
+                var textBox = document.getElementById("chefbot-textbox");
+                textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
+                // If textbox is visible, populate with default message
+                if (textBox.style.display == "block") {
+                    document.getElementById("user-question").value = "Hi, I am ChefBot. How can I help?";
+                }
+            }
+        </script>
+
 </head>
 
 {% block content %}
