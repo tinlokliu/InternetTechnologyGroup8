@@ -33,7 +33,7 @@ def login_view(request):
     return render(request, 'rango/login.html')  # Adjust the path to your login template
 
 def signup(request):
-    return render(request, 'rango/login.html')
+    return render(request, 'rango/sign.html')
 
 def welcome(request):
     return render(request, 'rango/welcome.html')
