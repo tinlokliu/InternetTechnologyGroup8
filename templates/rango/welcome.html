@@ -38,7 +38,7 @@
   }
   .welcome-section {
     width: 100%;
-    height:100%;
+    height: 100%;
     
     background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("{% static 'images/background.jpg' %}");
     background-size: cover;
@@ -104,7 +104,8 @@
 
 <div class="welcome-section">
   <h1>WELCOME</h1>
-  <button class="button">SIGN UP</button>
+  <!-- <button class="button">SIGN UP</button> -->
+  <a href="{% url 'rango:signup' %}" class="button">SIGN UP</a>
   <a href="{% url 'rango:login' %}" class="button">LOG IN</a>
 </div>
 

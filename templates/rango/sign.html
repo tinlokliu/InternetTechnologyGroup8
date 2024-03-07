@@ -1,14 +1,16 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 
 <head>
 
   <title>sign</title>
-  <link rel="stylesheet" href="page.css" media="screen">
-  <link rel="stylesheet" href="sign.css" media="screen">
+  <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'css/sign.css' %}" media="screen">
 
-  <script class="u-script" type="text/javascript" src="page.js" defer=""></script>
-  <script src="signup.js"></script>
+  <script class="u-script" type="text/javascript" src="{% static 'js/page.js' %}" defer=""></script>
+  <script src="{% static 'js/signup.js' %}"></script>
   <script src="https://www.recaptcha.net/recaptcha/api.js"async defer></script>
   <script>
     function onSubmit(token) {
