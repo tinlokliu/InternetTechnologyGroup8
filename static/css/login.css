@@ -29,7 +29,7 @@
 .u-section-1 .u-image-1 {
   width: 376px;
   height: 376px;
-  background-image: url("{% static 'images/chefbot_icon.png' %}");
+  background-image: url('../images/login.jpg');
   background-position: 50% 50%;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   margin: 55px auto 0;
@@ -74,8 +74,8 @@
 .error-message {
   color: red; 
   font-size: 1em;
-  margin-top: 5px; /* 在错误信息与输入框之间添加一些间隔 */
-  display: none; /* 默认不显示错误信息，只有在发生错误时才显示 */
+  margin-top: 5px; 
+  display: none; 
 }
 
 @media (max-width: 1199px) {
@@ -83,11 +83,11 @@
     min-height: 658px;
   }
 
-  .u-section-1 .u-repeater-1 {
+  /* .u-section-1 .u-repeater-1 {
     grid-auto-columns: NaN%;
     grid-template-columns: repeat(undefined, NaN%);
     min-height: NaNpx;
-  }
+  } */
 
   .u-section-1 .u-layout-cell-1 {
     min-height: 514px;
