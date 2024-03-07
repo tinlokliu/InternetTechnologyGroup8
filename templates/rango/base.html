@@ -77,12 +77,44 @@
             function toggleTextBox() {
                 var textBox = document.getElementById("chefbot-textbox");
                 textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
-                // If textbox is visible, populate with default message
-                if (textBox.style.display == "block") {
-                    document.getElementById("user-question").value = "Hi, I am ChefBot. How can I help?";
-                }
             }
-        </script>
+            
+            // Function to submit the question to the Django backend and display the response
+            function submitQuestion() {
+                var question = document.getElementById("user-question").value;
+                fetch('/ask_openai/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken') // Ensure CSRF token is included for Django
+                    },
+                    body: JSON.stringify({'question': question})
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("user-question").value = data.answer; // Display answer in the textbox
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
+            
+            // Function to get CSRF token
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            </script>           
 
 </head>
 

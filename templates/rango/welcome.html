@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  .menu li {
+    padding: 0 10px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  .welcome-section {
+    width: 100%;
+    height: 80vh;
+    
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10vh;
+  }
+  .welcome-section h1 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .button {
+    background-color: #d3d3d3; /* Light grey color */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 70px;
+    margin: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block; /* Make buttons align horizontally */
+  }
+  .button:hover {
+    background-color: #e6e6e6;
+  }
+  @media (max-width: 1199px) {
+    .welcome-section h1 {
+      font-size: 4.5rem;
+    }
+  }
+  @media (max-width: 991px) {
+    .welcome-section {
+      height: 60vh;
+      padding-top: 15vh;
+    }
+  }
+  @media (max-width: 767px) {
+    .welcome-section h1 {
+      font-size: 3.75rem;
+    }
+  }
+  @media (max-width: 575px) {
+    .welcome-section {
+      height: 50vh;
+      padding-top: 10vh;
+    }
+    .welcome-section h1 {
+      font-size: 3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="welcome-section">
+  <h1>WELCOME</h1>
+  <button class="button">SIGN UP</button>
+  <button class="button">LOG IN</button>
+</div>
+
+</body>
+</html>

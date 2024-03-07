@@ -3,10 +3,10 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
+import openai
 
 def homepage(request):
     return render(request, 'rango/homepage1.html')
-
 def about(request):
     return render(request, 'rango/about.html')
 
@@ -23,31 +23,20 @@ def signup(request):
     return render(request, 'rango/login.html')
 
 @csrf_exempt
-def openai_api(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        question = data.get('question', '')
-        
-        # Make a request to the OpenAI API
-        openai_response = openai_request(question)
+def ask_openai(request):
+    if request.method == "POST":
+        question = json.loads(request.body).get('question', '')
+        openai.api_key = settings.OPENAI_API_KEY
 
-        # Return the response to the frontend
-        return JsonResponse({'response': openai_response})
-
-    return JsonResponse({'error': 'Invalid request method'})
-
-def openai_request(question):
-    # Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
-    headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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',
-    }
-    data = {
-        'prompt': question,
-        'max_tokens': 150,
-    }
-    response = requests.post('https://api.openai.com/v1/completions', headers=headers, json=data)
-    if response.status_code == 200:
-        return response.json()['choices'][0]['text']
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=question,
+            temperature=0.7,
+            max_tokens=150,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
+        )
+        return JsonResponse({'answer': response.choices[0].text.strip()})
     else:
-        return f"Error: {response.status_code} - {response.text}"
+        return JsonResponse({'error': 'Method not allowed'}, status=405)

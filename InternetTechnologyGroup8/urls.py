@@ -18,8 +18,7 @@ from django.urls import path, include
 from rango import views
 
 urlpatterns = [
-    #path('', views.homepage, name='homepage'),
     path('admin/', admin.site.urls),
-    path('api/openai/', views.openai_api, name='openai_api'),
     path('', include('rango.urls')),
+    path('ask_openai/', views.ask_openai, name='ask_openai'),
 ]
