@@ -130,4 +130,7 @@ STATICFILES_DIRS = [
 
 APPEND_SLASH = False
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+PASSWORD_HASHERS = (
+'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)

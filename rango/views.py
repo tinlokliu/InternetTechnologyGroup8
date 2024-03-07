@@ -4,6 +4,9 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 import openai
+from django.contrib.auth import authenticate, login as auth_login
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 def homepage(request):
     return render(request, 'rango/homepage1.html')
@@ -16,11 +19,24 @@ def profile(request):
 def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
-def login(request):
-    return render(request, 'rango/login.html')
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            auth_login(request, user)
+            return redirect('rango:homepage')  # Adjust the namespace and view name as necessary
+        else:
+            # Return an error message to the login form
+            return render(request, 'rango/login.html', {'error': 'Invalid credentials. Please try again.'})
+    return render(request, 'rango/login.html')  # Adjust the path to your login template
 
 def signup(request):
     return render(request, 'rango/login.html')
+
+def welcome(request):
+    return render(request, 'rango/welcome.html')
 
 @csrf_exempt
 def ask_openai(request):

@@ -29,7 +29,7 @@
 .u-section-1 .u-image-1 {
   width: 376px;
   height: 376px;
-  background-image: url("login.jpg");
+  background-image: url("{% static 'images/chefbot_icon.png' %}");
   background-position: 50% 50%;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   margin: 55px auto 0;
