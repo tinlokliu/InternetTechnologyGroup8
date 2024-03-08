@@ -16,6 +16,13 @@ def about(request):
 def profile(request):
     return render(request, 'rango/profile.html')
 
+def forgot(request):
+    return render(request,'rango/forgot.html' )
+def forgot_1(request):
+    return render(request,'rango/forgot_1.html' )
+def forgot_2(request):
+    return render(request,'rango/forgot_2.html' )
+
 def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 

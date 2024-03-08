@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]');
     const usernamePasswordPattern = /^[a-zA-Z0-9_]+$/;
+
     function createErrorMessage(input, message) {
         const error = input.nextElementSibling;
         error.innerText = message;
@@ -12,17 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const error = input.nextElementSibling;
         error.style.display = 'none'; // 隐藏错误消息
       }
-      grecaptcha.render('robot', {
-        'sitekey': '6Lfjdd8UAAAAAKzWxI0k59BW5Tcf1C76XPKir1sr', //公钥
-        'theme': 'light', //主题颜色，有light与dark两个值可选
-        'size': 'compact',//尺寸规则，有normal与compact两个值可选
-        'callback': callback, //验证成功回调
-        'expired-callback': expiredCallback, //验证过期回调
-        'error-callback': errorCallback //验证错误回调
-    });
+  
     inputs.forEach(input => {
         input.addEventListener('blur', function() {
             removeErrorMessage(this); 
+          
 
             if (!this.value.trim()) {
                 createErrorMessage(this, 'This field is required.');
@@ -49,5 +44,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     
         });
+    });
+    var callback = function (args) {
+        console.log(args);
+        console.log('验证成功');
+    };
+
+    var expiredCallback = function (args) {
+        console.log(args);
+        console.log('验证过期');
+    };
+
+    var errorCallback = function (args) {
+        console.log(args);
+        console.log('验证失败');
+    };
+
+    // 现在可以安全地调用 grecaptcha.render，因为回调函数已经声明了
+    grecaptcha.render('robot', {
+        'sitekey': '6Le3RpIpAAAAACE-KoXys_sbtG9UnB8O1WfaIeDq',
+        'theme': 'light',
+        'size': 'compact',
+        'callback': callback,
+        'expired-callback': expiredCallback,
+        'error-callback': errorCallback
     });
 });
