@@ -1,0 +1,296 @@
+/*顶部导航栏*/
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+
+}
+.fan{
+   margin-right: auto;
+}
+.nav-item {
+     text-decoration: none;
+     color: black;
+     font-weight: 900;
+     margin: 0 10px;
+ }
+
+.tu{
+    width: 30px;
+    height: 30px;
+
+}
+
+
+/*main*/
+ main {
+     display: flex;
+     align-items: flex-start;
+     margin: auto;
+     margin-top: 40px;
+ }
+
+.image {
+    width: 315px;
+    height: 315px;
+    margin-right: 20px;
+    background-color: red;
+    margin-left: 330px;
+    border: 2px solid black;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.option1 {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;font-weight: 600;
+    border: 2px solid black;
+}
+
+.option2 {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;font-weight: 600;
+    border: 2px solid black;
+    background-color: #BEBEBE;
+}
+
+.your{
+    width: 900px;
+    height: 300px;
+    /*background-color: red;*/
+    margin-left: 330px;
+    margin-top: 40px;
+}
+.zihe{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.hezi{
+    width: 897px;
+    height: 120px;
+    /*background-color: blue;*/
+    border: 2px solid black;
+}
+
+.xhezi{
+    width: 120px;
+    height: 120px;
+    /*background-color: green;*/
+    border: 1px solid black;
+    float: left;
+}
+
+.xkuang{
+    width: 700px;
+    height: 120px;
+    /*background-color: yellow;*/
+    float: left;
+}
+.xj{
+    width: 75px;
+    height: 120px;
+    /*background-color: aquamarine;*/
+    float: left;
+}
+.lorem {
+    width: 700px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: 900;
+
+}
+
+.loremzi{
+    /*padding-top: 5px;*/
+    padding-left: 30px;
+    font-style: italic;
+
+}
+
+
+/*cookbook*/
+
+.box{
+    width: 925px;
+    height: 500px;
+    /*background-color: red;*/
+    margin: auto;
+}
+
+.boxtu{
+    width: 450px;
+    height: 400px;
+    /*background-color: blue;*/
+    float: left;
+    margin-right: 25px;
+    /*margin-bottom: 15px;*/
+}
+.boxname{
+    width: 446px;
+    height: 130px;
+    /*background-color: green;*/
+    float: left;
+    border: 2px solid black;
+}
+.boxjie{
+    margin-top: 15px;
+    width: 446px;
+    height: 255px;
+    /*background-color: yellow;*/
+    float: left;
+    border: 2px solid black;
+}
+.boxdi{
+    width: 447px;
+    height: 65px;
+    /*background-color: green;*/
+    float: left;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+.boxdi1{
+    width: 446px;
+    height: 65px;
+    /*background-color: green;*/
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    border: 2px solid black;
+}
+.boxnamezi{
+    width: 400px;
+    height: 130px;
+    /*background-color: blueviolet;*/
+    float: left;
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+.namexzi{
+    width: 378px;
+    height: 30px;
+    /*background-color: aquamarine;*/
+    font-size: 15px;
+    line-height: 30px;
+    padding-top: 5px;
+}
+.boxdizi{
+    width: 250px;
+    height: 30px;
+    float: left;
+    font-style: italic;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+.zhuti{
+    width: 925px;
+    height: 550px;
+    /*background-color: blue;*/
+    margin: auto;
+
+}
+
+.zhuti1{
+    width: 921px;
+    height: 320px;
+    /*background-color: red;*/
+    margin-top: 30px;
+    border: 2px solid black;
+}
+.zhuti2{
+    width: 921px;
+    height: 340px;
+    /*background-color: red;*/
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.dibu{
+
+    width: 921px;
+    height: 480px;
+    /*background-color: green;*/
+    margin: auto;
+    margin-top: 120px;
+    border: 2px solid black;
+}
+.pinglun{
+    width: 885px;
+    height: 110px;
+    /*background-color: brown;*/
+    margin: auto;
+    margin-top: 20px;
+}
+.add{
+    width: 925px;
+    height: 50px;
+    /*background-color: aqua;*/
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+.revi{
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 50px;
+    padding: 0 320px 0 320px;
+
+}
+.sub{
+    width: 130px;
+    height: 50px;
+    /*background-color: red;*/
+    margin:auto;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
