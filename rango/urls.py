@@ -17,4 +17,5 @@ urlpatterns = [
     path('forgot_2/', views.forgot_2, name='forgot_2'),
     path('ask_openai/', ask_openai, name='ask_openai'),
     path('homepage/', views.homepage, name='homepage'),
+    path('detail/', views.detail, name='detail'),
 ]

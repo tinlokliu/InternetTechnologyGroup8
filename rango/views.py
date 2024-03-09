@@ -26,6 +26,9 @@ def forgot_2(request):
 def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
+def detail(request):
+    return render(request, 'rango/detail.html')
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
