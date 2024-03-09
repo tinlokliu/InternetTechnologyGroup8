@@ -1,32 +1,72 @@
 {% extends 'rango/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
+
+<!-- CSS Stylesheets -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" type="text/css">
+{% endblock %}
 
 {% block content-it %}
-    <head>
-        <title>Profile</title>
-        
-        <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
-    </head>
 
-    <body>
-        <h1>Profile Page</h1>
-        <div>
-            This is the view for the profile section of the website<br />
+<body>
+    <section id="profile-info">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Left Column Content -->
+                    <img src="https://thumbs.dreamstime.com/z/portrait-young-handsome-happy-man-wearing-glasses-casual-smart-blue-clothing-yellow-color-background-square-composition-200740125.jpg"
+                        alt="Profile Image" class="profile-image">
+                </div>
+                <div class="col-md-8">
+                    <!-- Right Column Content -->
+                    <h1>Your Account</h1>
+                    <button type="button" class="btn btn-1">Change Password</button>
+                    <button type="button" class="btn btn-2">Delete Account</button>
+                    <button type="button" class="btn btn-3">Sign Out</button>
+                </div>
+            </div>
         </div>
-        <main>
-                    <!-- Profile Image -->
-        <img src="" alt="profilepicture" class="image">
+    </section>
+    <section id="extra-info">
+        <h2>Account Data Privacy</h2>
+        <p>Your privacy and security are important to us. We adhere to strict data protection protocols, 
+            ensuring that your personal information is handled safely and in compliance with applicable 
+            laws and regulations. Rest assured that any data you provide is used solely for the purposes 
+            outlined in our privacy policy. For more detailed information on how we safeguard your data 
+            and respect your privacy, please refer to our <a href="#">Privacy Policy page.</a></p>
+        <h2>Need Help?</h2>
+        <p>We're here to assist you every step of the way. If you have any questions, concerns, or encounter 
+            any issues while using our platform, don't hesitate to reach out to our support team at 
+            <a href="#">support@examplemail.com.</a> Our dedicated team is ready to provide you with prompt assistance and ensure 
+            that your experience with us is smooth and enjoyable. Whether you need technical support, assistance 
+            with account management, or have general inquiries, feel free to contact us—we're here to help!</p>
+    </section>
+</body>
+{% endblock %}
 
-        <!-- Profile Options -->
+
+
+
+<!-- <head>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+
+<body>
+    <h1>Profile Page</h1>
+    <div>
+        This is the view for the profile section of the website<br />
+    </div>
+    <main>
+
+        <img src="" alt="profilepicture" class="image">
         <div class="options">
             <div class="option1">Username</div>
             <div class="option2">Change Password</div>
             <div class="option3">DELETE ACCOUNT</div>
-            <div class ="option4">Sign Out</div>
-        </main>
-    </body>
-    {% endblock %}
-
-</html>
+            <div class="option4">Sign Out</div>
+    </main>
+</body> -->

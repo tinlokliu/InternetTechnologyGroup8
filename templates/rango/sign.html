@@ -11,7 +11,7 @@
 
   <script class="u-script" type="text/javascript" src="{% static 'js/page.js' %}" defer=""></script>
   <script src="{% static 'js/signup.js' %}"></script>
-  <script src="https://www.recaptcha.net/recaptcha/api.js"async defer></script>
+  <script src="https://www.recaptcha.net/recaptcha/api.js?hl=en"></script>
   <script>
     function onSubmit(token) {
       document.getElementById("demo-form").submit();
@@ -33,7 +33,7 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <header>
       </header>
-      <section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca" data-href="https://nicepage.com">
+      <section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca" >
         <div class="u-clearfix u-sheet u-sheet-1">
           <div class="u-expanded-width u-list u-list-1">
             <div class="u-repeater u-repeater-1"></div>
@@ -51,7 +51,7 @@
                 <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                   <div class="u-container-layout u-valign-bottom u-container-layout-2">
                     <div class="u-form u-form-1">
-                      <form action="https://forms.nicepagesrv.com/v2/form/process"
+                      <form 
                         class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form"
                         style="padding: 30px;">
                         <div class="u-form-group u-form-name">
@@ -79,11 +79,11 @@
                           <div class="error-message" style="display: none;"></div>
                         </div>
                       
-                          <form action="?" method="POST">
-                            <div class="g-recaptcha" data-sitekey="6LfwJ40pAAAAADerOpsDPgarKWlJ65-ZnUDBhoVr"></div>
-                            <br/>
-                            <!-- <input type="submit" value="Submit"> -->
-                          </form>
+                          <!-- <form> -->
+                        <div  action="?" method="POST" id="robot" class="g-recaptcha" data-sitekey="6Le3RpIpAAAAAJupPSNphg6l23glGZmNQ1LaxnHF"></div>
+                            
+                            
+                          <!-- </form> -->
                         <div class="u-align-center u-form-group u-form-submit">
                           <a href="#"
                             class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">Sign
@@ -106,8 +106,8 @@
           </div>
         </div>
       </section>
-
-
+     
+  
 </body>
 
 </html>

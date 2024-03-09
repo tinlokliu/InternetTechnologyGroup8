@@ -1,0 +1,142 @@
+#profile-info {
+    padding-bottom: 70px;
+    margin: 20px 0px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
+    margin-left: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        margin: 0 auto; /* Center the image horizontally */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+}
+
+h1 {
+    font-family: "Montagu Slab";
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 0;
+    /* Reduce space above the h1 */
+    padding-bottom: 20px;
+    color: #000000;
+    text-align: left;
+    /* Align the text to the left */
+}
+
+/* Additional styles to center the content within columns */
+.col-md-8 {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .col-md-8 {
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .btn-group-vertical {
+        margin-top: 20px; /* Add space between h1 and buttons */
+    }
+}
+
+
+.col-md-4 {
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* .btn-group-vertical .btn {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    
+} */
+
+.btn {
+    width: 60%; /* Set consistent width for all buttons */
+    margin-bottom: 10px; /* Adjust spacing between buttons */
+    padding: 20px 10px; /* Adjust padding for each button */
+    border: 0;
+    font-size: large;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-family: "Molengo", sans-serif;
+    font-weight: bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.btn.btn-1,
+.btn.btn-2,
+.btn.btn-3 {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #007F47;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+
+
+
+button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+#extra-info {
+    background-color: #007F47;
+    padding: 50px 100px 20px 100px;
+}
+
+h2 {
+    font-family: "Montagu Slab";
+    /* font-size: 2.2rem; */
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 0;
+    /* Reduce space above the h1 */
+    padding-bottom: 5px;
+    color: #ffffff;
+    text-align: left;
+}
+
+p {
+    font-family: "Molengo", sans-serif;
+    color:#ffffff;
+    margin-bottom: 50px;
+    
+}
+
+a {
+    color:#ffffff
+}
