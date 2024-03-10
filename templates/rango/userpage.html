@@ -1,0 +1,102 @@
+{% extends 'rango/base.html' %}
+{% load static %}
+
+<!-- CSS Stylesheets -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css"> <!-- Ensure homepage-style1.css is imported after base.css -->
+<link rel="stylesheet" href="{% static 'css/userpage.css' %}">
+{% endblock %}
+
+{% block content-it %}
+<body>
+    <main>
+        <img src="{% static 'images/avatar-hover.webp' %}" alt="image" class="image">
+
+        <div class="options">
+            <div class="option">Jacky</div>
+            <div class="changavatar" id="change-avatar-btn" onclick="openAvatarModal()">CHANGE AVATAR</div>
+            <div class="option2"><a href="{% url 'rango:welcome' %}" style="text-decoration: none;color: black;">SIGN OUT</a></div>
+        </div>
+    </main>
+
+    <!-- Avatar Modal -->
+    <div id="avatarModal" class="modal">
+        <div class="modal-content">
+            <div class="avatar-options">
+                <img src="{% static 'images/avatar1.webp' %}" alt="Avatar 1" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar1.png')">
+                <img src="{% static 'images/avatar2.webp' %}" alt="Avatar 2" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar2.png')">
+                <img src="{% static 'images/avatar3.webp' %}" alt="Avatar 3" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar3.png')">
+                <img src="{% static 'images/avatar4.webp' %}" alt="Avatar 4" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar4.png')">
+                <img src="{% static 'images/avatar5.webp' %}" alt="Avatar 5" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar5.png')">
+                <img src="{% static 'images/avatar6.webp' %}" alt="Avatar 6" style="width: 100px;height: 100px;" onclick="selectAvatar(this, 'avatar6.png')">
+            </div>
+            <button onclick="submitAvatar()" class="butt" >Submit</button>
+        </div>
+    </div>
+
+
+        <div class="your">
+
+            <div class="zihe">RECEIPES</div>
+{#           1#}
+            <div class="hezi">
+                <div class="xhezi">
+                    <img src="{% static 'images/meishi.png' %}" style="width: 110px;height: 110px;border-radius: 20px;margin-top: 5px;margin-left: 5px;"/>
+                </div>
+                <div class="xkuang">
+                    <div class="lorem">Introduce </div>
+                    <div class="loremzi">Spaghetti with tomatoes is a simple and delicious Italian classic.
+                    It combines fresh tomatoes, spices and pasta for a silky, sweet and sour taste.  This dish is packed with vitamin C and antioxidants,
+                    making it a quick and healthy dinner choice.
+                    The preparation process is simple and suitable for novice cooks and busy lifestyles.</div>
+                </div>
+                 <div class="xj">
+                    <a href="{% url 'rango:recipe' %}"><img src="{% static 'images/youjiantou.png' %}" style="width: 40px;height: 40px;margin-top: 40px;margin-left: 20px;"/></a>
+                </div>
+            </div>
+{#            2#}
+            <div class="hezi">
+                <div class="xhezi">
+                    <img src="{% static 'images/meishi2.png' %}" style="width: 110px;height: 110px;border-radius: 20px;margin-top: 5px;margin-left: 5px;"/>
+                </div>
+                <div class="xkuang">
+                    <div class="lorem">Kung Pao Chicken </div>
+                    <div class="loremzi"> Kung pao chicken is one of the traditional Chinese dishes, originated in Sichuan province,
+                        is a famous Sichuan cuisine.  Kung pao chicken with diced chicken, peanuts, green and red pepper as the main materials,
+                        taste spicy and delicious, is a family or restaurant common dishes.</div>
+                </div>
+                 <div class="xj">
+                    <a href="{% url 'rango:recipe' %}"><img src="{% static 'images/youjiantou.png' %}" style="width: 40px;height: 40px;margin-top: 40px;margin-left: 20px;"/></a>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+<script>
+    function openAvatarModal() {
+        var modal = document.getElementById("avatarModal");
+        modal.style.display = "block";
+    }
+
+    function selectAvatar(element, avatar) {
+        var allImages = document.querySelectorAll('.avatar-options img');
+        allImages.forEach(img => img.classList.remove('selected'));
+        element.classList.add('selected');
+        console.log("Selected avatar: " + avatar);
+    }
+
+    function submitAvatar() {
+    var selectedAvatar = document.querySelector('.avatar-options img.selected').getAttribute('src');
+    console.log("Submitted avatar: " + selectedAvatar);
+
+    var mainImage = document.querySelector('.image');
+    mainImage.setAttribute('src', selectedAvatar);
+
+    var modal = document.getElementById("avatarModal");
+    modal.style.display = "none";
+}
+</script>
+{% endblock %}

@@ -30,7 +30,7 @@ def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
 def detail(request):
-    return render(request, 'rango/detail.html')
+    return render(request, 'rango/recipe.html')
 
 def login_view(request):
     if request.method == 'POST':
@@ -72,6 +72,9 @@ def register(request):
 
 def welcome(request):
     return render(request, 'rango/welcome.html')
+
+def userpage(request):
+    return render(request, 'rango/userpage.html')
 
 @csrf_exempt
 def ask_openai(request):
