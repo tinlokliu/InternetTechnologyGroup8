@@ -7,6 +7,9 @@ import openai
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import login
+from django.contrib import messages
 
 def homepage(request):
     return render(request, 'rango/homepage1.html')
@@ -31,8 +34,8 @@ def detail(request):
 
 def login_view(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         if user is not None:
             auth_login(request, user)
@@ -44,6 +47,28 @@ def login_view(request):
 
 def signup(request):
     return render(request, 'rango/sign.html')
+
+def register(request):
+    
+    if request.method == 'POST':
+
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm']
+        
+        if password == confirm_password:
+            try:
+                user = User.objects.create_user(username, email, password)
+                user.save()
+                login(request, user)  
+                return redirect('rango:login')  
+            except Exception as e:
+                messages.error(request, f"Error creating account: {e}")
+        else:
+            messages.error(request, "Password and confirm password do not match")
+    
+    return render(request, 'rango/sign.html', {})
 
 def welcome(request):
     return render(request, 'rango/welcome.html')

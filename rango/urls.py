@@ -12,6 +12,7 @@ urlpatterns = [
     path('catalogue/', views.catalogue, name='catalogue'),
     path('login/', views.login_view, name='login'),
     path('signup/', views.signup, name='signup'),
+    path('register/', views.register, name='register'),
     path('forgot/', views.forgot, name='forgot'),
     path('forgot_1/', views.forgot_1, name='forgot_1'),
     path('forgot_2/', views.forgot_2, name='forgot_2'),

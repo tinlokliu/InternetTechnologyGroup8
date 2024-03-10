@@ -59,8 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(args);
         console.log('验证失败');
     };
-
-    // 现在可以安全地调用 grecaptcha.render，因为回调函数已经声明了
+    function recaptchaCallback() {
     grecaptcha.render('robot', {
         'sitekey': '6Le3RpIpAAAAACE-KoXys_sbtG9UnB8O1WfaIeDq',
         'theme': 'light',
@@ -69,4 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
         'expired-callback': expiredCallback,
         'error-callback': errorCallback
     });
+}
 });

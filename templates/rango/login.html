@@ -16,6 +16,13 @@
 </head>
   <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8216"><div class="u-clearfix u-sheet u-sheet-1">
     <body><header>
+    {% if error %}
+    <script type="text/javascript">
+        window.onload = function() {
+            alert("{{ error }}");
+        };
+    </script>
+    {% endif %}
     </header> 
     <section class="u-clearfix u-section-1" id="sec-f3ca">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -33,7 +40,8 @@
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                 <div class="u-container-layout u-valign-top u-container-layout-2">
                   <div class="u-form u-form-1">
-                    <form  class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
+                    <form  method="post" action="{% url 'rango:login' %}" class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
+                      {% csrf_token %}
                       <div class="u-form-group u-form-name">
                         <label for="name-fad4" class="u-label">Username *</label>
                         <input type="text" placeholder="Enter your Name" id="name-fad4" name="username" class="u-input u-input-rectangle" required="">
@@ -42,7 +50,7 @@
                       </div>
                       <div class="u-form-group">
                         <label for="email-fad4" class="u-label">Password *</label>
-                        <input type="text" placeholder="Enter your Password" id="email-fad4" name="password" class="u-input u-input-rectangle" required="required">
+                        <input type="password" placeholder="Enter your Password" id="email-fad4" name="password" class="u-input u-input-rectangle" required="required">
                         <div class="error-message" style="display: none;"></div>
                       </div>
                       <div class="u-form-checkbox u-form-group u-form-group-3">
@@ -50,8 +58,9 @@
                         <label for="checkbox-0294" class="u-field-label"> Remember me</label>
                       </div>
                       <div class="u-align-center u-form-group u-form-submit">
-                        <a href="{% url 'rango:homepage' %}" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">Log in </a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
+                        <button type="submit" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">
+                          Log in
+                      </button>
                       </div>
                       <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
                       <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
@@ -69,5 +78,5 @@
         </div>
       </div>
     </section>
- 
+
 </body></html>
