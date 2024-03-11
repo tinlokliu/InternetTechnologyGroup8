@@ -34,6 +34,7 @@
     <!-- Fontawesome icons -->
     {% block js %}
     <script src="https://kit.fontawesome.com/8a83b1732f.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/chefbot.js' %}"></script>
     {% endblock %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -73,59 +74,7 @@
             <button id="submit-question" onclick="submitQuestion()">Ask</button>
         </div>
 
-        <script>
-            // Function to toggle visibility of textbox
-            function toggleTextBox() {
-                var textBox = document.getElementById("chefbot-textbox");
-                textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
-            }
-            
-            // Modified function in base.html
-function submitQuestion() {
-    var question = document.getElementById("user-question").value;
-    var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-    fetch('/ask_openai/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': csrfToken
-        },
-        body: JSON.stringify({'question': question})
-    })
-    .then(response => response.json()) // Parsing response as JSON
-    .then(data => {
-        // Log data for debugging
-        console.log(data);
-        // Ensure 'data.answer' exists and is not 'undefined'
-        if(data.answer !== undefined) {
-            document.getElementById("user-question").value = data.answer; // Correctly targeting the element to display answer
-        } else {
-            // Handling cases where 'data.answer' might be undefined or not as expected
-            document.getElementById("user-question").value = "Could not get an answer.";
-        }
-    })
-    .catch((error) => {
-        // Handling any errors that occur during the fetch operation
-        console.error('Error:', error);
-    });
-}
         
-            // Function to get CSRF token
-            function getCookie(name) {
-                let cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    const cookies = document.cookie.split(';');
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
-                    }
-                }
-                return cookieValue;
-            }
-            </script>           
 
 </head>
 
