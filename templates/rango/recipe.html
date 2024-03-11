@@ -14,7 +14,7 @@
     <main>
         <div class="box">
             <div class="boxtu">
-                <img class='recipe-img' src=".." style="width: 450px;height: 400px;border-radius: 20px;"/>
+                <img class="recipe-img"src=".." style="width: 450px;height: 400px;border-radius: 20px;"/>
             </div>
             <div class="boxname">
                 <div class="boxnamezi">
@@ -32,32 +32,42 @@
                         <span>(11 reviews)</span>
                     </div>
                 </div>
-                <img src="{% static 'images/jinqibiaoq.png' %}" style="width: 35px;height: 35px;float: left;"/>
+                <button class="favourite" style="float: left;width:35px;height: 35px;border: 0;background-color: transparent; "><img src="{% static 'images/jinqibiaoq.png' %}" style="width: 35px;height: 35px;float: left;"/></button>
             </div>
             <div class="boxjie">
-                <div class="Introduce">Introduce</div>
-                <div style="font-style: italic;padding-left: 20px;">Spaghetti with tomatoes is a simple and delicious Italian classic.
-                    It combines fresh tomatoes, spices and pasta for a silky, sweet and sour taste.  This dish is packed with vitamin C and antioxidants,
-                    making it a quick and healthy dinner choice.
-                    The preparation process is simple and suitable for novice cooks and busy lifestyles. </div>
-            </div>
-            <div class="boxdi">
-                <div><img src="{% static 'images/avatar.png' %}" style="width:55px;height: 55px;float: left;margin-top: 3px;"/></div>
-                <div class="boxdizi">Jacky</div>
-            </div>
-            <div class="boxdi1">
-                <div style="width:220px;height:63px; border-right: 1px solid #c3c6ce;float: left;">
-                    <img src="{% static 'images/shizhong.png' %}" style="width:50px;height: 50px;float: left;margin-top: 5px;margin-left: 5px;"/>
-                    <div class='cook-time' style="float: left; margin-top: 15px; margin-left: 20px;font-size: 20px;">30~40min</div>
-                </div>
-
-                <div class='score' style="float: left;width:220px;height:65px;line-height: 20px;">
+<!-- {#                <div class="Introduce">Introduce</div>#}
+{#                <div style="font-style: italic;padding-left: 20px;">Spaghetti with tomatoes is a simple and delicious Italian classic.#}
+{#                    It combines fresh tomatoes, spices and pasta for a silky, sweet and sour taste.  This dish is packed with vitamin C and antioxidants,#}
+{#                    making it a quick and healthy dinner choice.#}
+{#                    The preparation process is simple and suitable for novice cooks and busy lifestyles. </div>#} -->
+                <div class="score" style="float: left;width:220px;height:65px;line-height: 20px;padding: 20px 10px;">
                     <ul>
                         <li>Sweet and sour taste</li>
                         <li>dolor sit amet</li>
 
                     </ul>
                 </div>
+
+
+
+            </div>
+            <div class="boxdi">
+                <div><img src="{% static 'images/avatar.png' %}" style="width:55px;height: 55px;float: left;margin-top: 3px;"/></div>
+                <div class="boxdizi">Jacky</div>
+            </div>
+            <div class="boxdi1">
+                <div style="width:446px;height:63px; float: left;">
+                    <img src="{% static 'images/shizhong.png' %}" style="width:50px;height: 50px;float: left;margin-top: 5px;margin-left: 5px;"/>
+                    <div class="cook-time" style="float: left; margin-top: 15px; margin-left: 20px;font-size: 20px;">30~40min</div>
+                </div>
+
+<!-- {#                <div style="float: left;width:220px;height:65px;line-height: 20px;">#}
+{#                    <ul>#}
+{#                        <li>Sweet and sour taste</li>#}
+{#                        <li>dolor sit amet</li>#}
+{##}
+{#                    </ul>#}
+{#                </div>#} -->
             </div>
         </div>
     </main>
@@ -77,6 +87,9 @@
                 <li style="margin-left: 30px;font-style: italic;">Dried basil: Moderate   </li>
                 <li style="margin-left: 30px;font-style: italic;">Dried oregano: In moderation   </li>
                 <li style="margin-left: 30px;font-style: italic;">Parmesan cheese: In moderation  </li>
+                <li style="margin-left: 30px;font-style: italic;">Dried basil: Moderate   </li>
+                <li style="margin-left: 30px;font-style: italic;">Dried oregano: In moderation   </li>
+                <li style="margin-left: 30px;font-style: italic;">Parmesan cheese: In moderation  </li>
 
             </ur>
         </div>
@@ -90,12 +103,12 @@
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">4.Add the tomato paste to the pan, add salt, pepper, basil and oregano, stir well, then turn down the heat and cook for about 10 minutes to thicken the sauce.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">5.When the pasta is cooked, drain it and add it to the tomato sauce and mix gently to make sure the pasta is well coated with tomato sauce.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">6.To serve, garnish with some Parmesan cheese. </li>
+                <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">6.To serve, garnish with some Parmesan cheese. </li>
+                <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">6.To serve, garnish with some Parmesan cheese. </li>
+                <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">6.To serve, garnish with some Parmesan cheese. </li>
             </ur>
         </div>
     </div>
-
-
-
 
 
     <div class="dibu">
@@ -145,7 +158,6 @@
         return true;
     }
 
-
     document.addEventListener('DOMContentLoaded', function() {
 
         const savedIDString = sessionStorage.getItem('recipeId').replace(/"/g, '');
@@ -185,7 +197,7 @@
             
             const scoreDiv = document.querySelector('.score');
             scoreDiv.innerHTML = `<li> Health score: ${recipe.healthScore}</li>
-                                  <li> For people: ${recipe.servings}</li>`;
+                                <li> For people: ${recipe.servings}</li>`;
 
             const ingredientsDiv = document.querySelector('.zhuti1');
             const methodDiv = document.querySelector('.zhuti2');
@@ -206,7 +218,6 @@
 
         }
     })
-
 </script>
 
 {% endblock %}
