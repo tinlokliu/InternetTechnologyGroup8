@@ -14,7 +14,7 @@
     <main>
         <div class="box">
             <div class="boxtu">
-                <img src="{% static 'images/meishi.png' %}" style="width: 450px;height: 400px;border-radius: 20px;"/>
+                <img class='recipe-img' src=".." style="width: 450px;height: 400px;border-radius: 20px;"/>
             </div>
             <div class="boxname">
                 <div class="boxnamezi">
@@ -48,13 +48,13 @@
             <div class="boxdi1">
                 <div style="width:220px;height:63px; border-right: 1px solid #c3c6ce;float: left;">
                     <img src="{% static 'images/shizhong.png' %}" style="width:50px;height: 50px;float: left;margin-top: 5px;margin-left: 5px;"/>
-                    <div style="float: left; margin-top: 15px; margin-left: 20px;font-size: 20px;">30~40min</div>
+                    <div class='cook-time' style="float: left; margin-top: 15px; margin-left: 20px;font-size: 20px;">30~40min</div>
                 </div>
 
-                <div style="float: left;width:220px;height:65px;line-height: 20px;">
+                <div class='score' style="float: left;width:220px;height:65px;line-height: 20px;">
                     <ul>
                         <li>Sweet and sour taste</li>
-{#                        <li>dolor sit amet</li>#}
+                        <li>dolor sit amet</li>
 
                     </ul>
                 </div>
@@ -144,6 +144,69 @@
         }
         return true;
     }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const savedIDString = sessionStorage.getItem('recipeId').replace(/"/g, '');
+        const savedID = parseInt(savedIDString.trim(), 10);
+        console.log(savedID);
+
+        getRecipeDetails(savedID)
+        async function getRecipeDetails(ID) {
+            const apiKey = '4b90bda2e14846efb68086d1be36fe12'; 
+            const apiUrl = `https://api.spoonacular.com/recipes/${ID}/information?apiKey=${apiKey}`;
+            console.log('finding')
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                displayRecipeDetails(data);
+            } catch (error) {
+                console.error('Error fetching recipe details:', error);
+            }
+        }
+
+        function displayRecipeDetails(recipe) {
+
+            const img = document.querySelectorAll('.recipe-img');
+            img.forEach((imageElement) => {
+                console.log('img load');
+                imageElement.src = recipe.image;  
+                    });
+            
+            var nameElement = document.querySelector('.boxnamezi');
+            nameElement.innerHTML = '<strong>' + recipe.title + '</strong>';;
+            
+            var authorElement = document.querySelector('.boxdizi');
+            authorElement.innerHTML = recipe.sourceName;;
+
+            var cookElement = document.querySelector('.cook-time');
+            cookElement.innerHTML = recipe.readyInMinutes + '    Minutes';;
+            
+            const scoreDiv = document.querySelector('.score');
+            scoreDiv.innerHTML = `<li> Health score: ${recipe.healthScore}</li>
+                                  <li> For people: ${recipe.servings}</li>`;
+
+            const ingredientsDiv = document.querySelector('.zhuti1');
+            const methodDiv = document.querySelector('.zhuti2');
+            
+            ingredientsDiv.innerHTML = '';
+            methodDiv.innerHTML = '';
+
+            let ingredientsHtml = '<h3>INGREDIENTS:</h3><ul>';
+            recipe.extendedIngredients.forEach(ingredient => {
+                ingredientsHtml += `<li>${ingredient.original}</li>`;
+            });
+            ingredientsHtml += '</ul>';
+
+            let instructionsHtml = recipe.instructions ? `<h3>Method:</h3><p>${recipe.instructions}</p>` : '';
+            
+            ingredientsDiv.innerHTML = ingredientsHtml;
+            methodDiv.innerHTML = instructionsHtml;
+
+        }
+    })
+
 </script>
 
 {% endblock %}
