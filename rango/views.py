@@ -4,12 +4,17 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 import openai
+import json
+from django.conf import settings
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib import messages
+import os
+from openai import OpenAI
+from chatGPT import ask_openai
 
 def homepage(request):
     return render(request, 'rango/homepage1.html')
@@ -30,7 +35,7 @@ def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
 def detail(request):
-    return render(request, 'rango/detail.html')
+    return render(request, 'rango/recipe.html')
 
 def login_view(request):
     if request.method == 'POST':
@@ -73,21 +78,18 @@ def register(request):
 def welcome(request):
     return render(request, 'rango/welcome.html')
 
-@csrf_exempt
-def ask_openai(request):
-    if request.method == "POST":
-        question = json.loads(request.body).get('question', '')
-        openai.api_key = settings.OPENAI_API_KEY
+def userpage(request):
+    return render(request, 'rango/userpage.html')
 
-        response = openai.Completion.create(
-            engine="text-davinci-003",
-            prompt=question,
-            temperature=0.7,
-            max_tokens=150,
-            top_p=1.0,
-            frequency_penalty=0.0,
-            presence_penalty=0.0
-        )
-        return JsonResponse({'answer': response.choices[0].text.strip()})
+@csrf_exempt
+def ask_openai_view(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        question = data.get('question', '')
+        print(question)
+        
+    
+        answer = ask_openai(question)
+        return JsonResponse({'answer': answer})            
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)

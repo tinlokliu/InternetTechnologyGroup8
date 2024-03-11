@@ -1,24 +1,20 @@
+{% extends 'rango/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Recipe</title>
-    <link rel="stylesheet" href="{% static 'css/recipe.css' %}">
-</head>
+
+<!-- CSS Stylesheets -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/homepage-style1.css' %}" type="text/css"> <!-- Ensure homepage-style1.css is imported after base.css -->
+<link rel="stylesheet" href="{% static 'css/userpage.css' %}">
+{% endblock %}
+
+{% block content-it %}
 <body>
- <header>
-        <a class="fan" ><img src="" class="tu"/> </a>
-        <a class="nav-item" href="{% url 'rango:homepage' %}">HOME</a>
-        <a class="nav-item" href="#">ABOUT US</a>
-        <a class="nav-item" href="#">SHARE RECIPE</a>
-        <a class="nav-item" href="#"><img src="" alt="photograph" class="tu"/></a>
-        <a class="nav-item" ><img src="" alt="photograph" class="tu"/></a>
-    </header>
+
     <main>
         <div class="box">
             <div class="boxtu">
-                <img src="..." class="recipe-img" alt="..." style="width: 450px;height: 400px;"/>
+                <img class='recipe-img' src=".." style="width: 450px;height: 400px;border-radius: 20px;"/>
             </div>
             <div class="boxname">
                 <div class="boxnamezi">
@@ -36,29 +32,29 @@
                         <span>(11 reviews)</span>
                     </div>
                 </div>
-                <img src="" style="width: 35px;height: 35px;float: left;margin-left:8px;"/>
+                <img src="{% static 'images/jinqibiaoq.png' %}" style="width: 35px;height: 35px;float: left;"/>
             </div>
             <div class="boxjie">
-                <div style="font-style: italic;font-weight: 900;padding-left: 20px;margin-top: 10px;margin-bottom: 10px;">Introduce</div>
+                <div class="Introduce">Introduce</div>
                 <div style="font-style: italic;padding-left: 20px;">Spaghetti with tomatoes is a simple and delicious Italian classic.
                     It combines fresh tomatoes, spices and pasta for a silky, sweet and sour taste.  This dish is packed with vitamin C and antioxidants,
                     making it a quick and healthy dinner choice.
                     The preparation process is simple and suitable for novice cooks and busy lifestyles. </div>
             </div>
             <div class="boxdi">
-                <div><img src="{% static 'images/katong.png' %}" style="width:60px;height: 65px;float: left;"/></div>
+                <div><img src="{% static 'images/avatar.png' %}" style="width:55px;height: 55px;float: left;margin-top: 3px;"/></div>
                 <div class="boxdizi">Jacky</div>
             </div>
             <div class="boxdi1">
-                <div style="width:220px;height:65px; border-right: 2px solid black;float: left;">
-                    <img src="" style="width:50px;height: 50px;float: left;padding-top: 8px;padding-left: 30px;"/>
-                    <div style="float: left; margin-top: 20px; margin-left: 20px;font-size: 20px;">30~40min</div>
+                <div style="width:220px;height:63px; border-right: 1px solid #c3c6ce;float: left;">
+                    <img src="{% static 'images/shizhong.png' %}" style="width:50px;height: 50px;float: left;margin-top: 5px;margin-left: 5px;"/>
+                    <div class='cook-time' style="float: left; margin-top: 15px; margin-left: 20px;font-size: 20px;">30~40min</div>
                 </div>
 
-                <div style="float: left;width:220px;height:65px;line-height: 20px;">
+                <div class='score' style="float: left;width:220px;height:65px;line-height: 20px;">
                     <ul>
                         <li>Sweet and sour taste</li>
-{#                        <li>dolor sit amet</li>#}
+                        <li>dolor sit amet</li>
 
                     </ul>
                 </div>
@@ -68,8 +64,8 @@
 
     <div class="zhuti">
         <div class="zhuti1">
-            <div style="font-size: 20px;font-weight: 900;font-style: italic;padding-left: 20px;margin-top: 30px;margin-bottom: 10px;">INGREDIENTS</div>
-            <ul>
+            <div class="INGREDIENTS">INGREDIENTS</div>
+            <ur>
                 <li style="margin-left: 30px;font-style: italic;">Pasta: 250g  </li>
                 <li style="margin-left: 30px;font-style: italic;">Ketchup: 200g  </li>
                 <li style="margin-left: 30px;font-style: italic;">Olive oil: moderate  </li>
@@ -82,62 +78,74 @@
                 <li style="margin-left: 30px;font-style: italic;">Dried oregano: In moderation   </li>
                 <li style="margin-left: 30px;font-style: italic;">Parmesan cheese: In moderation  </li>
 
-            </ul>
+            </ur>
         </div>
 
         <div class="zhuti2">
-            <div style="font-size: 20px;font-weight: 900;font-style: italic;padding-left: 20px;margin-bottom: 10px;">METHOD</div>
-            <ul style="list-style-type: none;">
+            <div class="METHOD">METHOD</div>
+            <ur style="list-style-type: none;">
                 <li style="margin-left: 30px;font-style: italic; padding-bottom: 15px;">1.First, boil enough water in a large pot.  Add a little salt and a few drops of olive oil, then place the pasta in the boiling water and cook for the time indicated on the package, until the pasta is tender but still al dente.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">2.Meanwhile, in a separate pan, heat the olive oil over medium heat.  Add the chopped garlic and onion and fry until soft and golden.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">3.Add diced fresh tomatoes and continue to fry until the tomatoes soften and release their juices.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">4.Add the tomato paste to the pan, add salt, pepper, basil and oregano, stir well, then turn down the heat and cook for about 10 minutes to thicken the sauce.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">5.When the pasta is cooked, drain it and add it to the tomato sauce and mix gently to make sure the pasta is well coated with tomato sauce.  </li>
                 <li style="margin-left: 30px;font-style: italic;padding-bottom: 15px;">6.To serve, garnish with some Parmesan cheese. </li>
-            </ul>
+            </ur>
         </div>
     </div>
 
 
+
+
+
     <div class="dibu">
-            <div style="font-size: 20px;font-weight: 900;font-style: italic;padding-left: 20px;padding-top: 30px;">
-                REVIEWS
-            </div>
-
-            <div class="pinglun">
-                <div>
-                    <img src="{% static 'images/katong.png' %}" style="width: 110px;height: 110px;float: left;">
-                    <div style="float: left;width: 700px;line-height: 20px;margin-top: 25px;margin-left: 20px;">
-                        "Tomato pasta is one of my favorite simple, home-cooked dishes.  The process is simple, but the taste is anything but!  The sweet and sour of the fresh tomatoes match the texture of the pasta just right, leaving a lasting aftertaste.  It's a quick and delicious dinner option!"
-                    </div>
-                </div>
-            </div>
+        <div  class="REVIEWS">
+            REVIEWS
+        </div>
+        {# 1#}
+        {% for comment in comments %}
         <div class="pinglun">
-                <div>
-                    <img src="{% static 'images/katong.png' %}" style="width: 110px;height: 110px;float: left;">
-                    <div style="float: left;width: 700px;line-height: 20px;margin-top: 25px;margin-left: 20px;">
-                        "This tomato pasta dish is the perfect combination of delicious and nutritious.  The fresh ingredients retain the tomato's natural aroma and nutrients, while the pasta fills the dish up.  The family loves this dish and it feels like home every time you cook it."
-                    </div>
+            <div>
+                <img src="{% static 'images/katong.png' %}" style="width: 110px;height: 110px;float: left;">
+                <div style="float: left;width: 700px;line-height: 20px;margin-top: 25px;margin-left: 20px;">
+                    {{ comment.content }}
                 </div>
             </div>
-        <div class="pinglun">
-                <div>
-                    <img src="{% static 'images/katong.png' %}" style="width: 110px;height: 110px;float: left;">
-                    <div style="float: left;width: 700px;line-height: 20px;margin-top: 25px;margin-left: 20px;">
-                        "As a busy office worker, I am always looking for simple and delicious recipes.  Tomato pasta is exactly what I'm looking for!  Not only is it simple and easy to make, but it also tastes delicious and brings me a pleasant dining experience.  Highly recommended to all busy friends, whether you are a new chef or a veteran, you can easily enjoy this delicious dish."
-                    </div>
-                </div>
-            </div>
+        </div>
+        {% endfor %}
+    </div>
+<div id="comment_form" class="plunkaung">
+    <form method="post" action="" onsubmit="return validateComment()">
+        {% csrf_token %}
+        <textarea name="comment_content" id="comment_content" class="kuang" placeholder="Say something good about?"></textarea>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>
+   <div class="add">
+    <a class="revi" href="#comment_form" onclick="scrollToCommentForm()">ADD YOUR REVIEW...</a>
     </div>
 
-    <div class="add">
-        <a class="revi">ADD YOUR REVIEW...</a>
-    </div>
 
-    <div class="sub">
-        SUBMIT
-    </div>
+
+
+</body>
 <script>
+    function scrollToCommentForm() {
+        var commentForm = document.getElementById('comment_form');
+        commentForm.style.display = 'block';
+        commentForm.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function validateComment() {
+        var commentContent = document.getElementById('comment_content').value;
+        if (commentContent.trim() === '') {
+            alert('The content cannot be empty. Please enter the content.');
+            return false;
+        }
+        return true;
+    }
+
+
     document.addEventListener('DOMContentLoaded', function() {
 
         const savedIDString = sessionStorage.getItem('recipeId').replace(/"/g, '');
@@ -169,7 +177,15 @@
             var nameElement = document.querySelector('.boxnamezi');
             nameElement.innerHTML = '<strong>' + recipe.title + '</strong>';;
             
+            var authorElement = document.querySelector('.boxdizi');
+            authorElement.innerHTML = recipe.sourceName;;
 
+            var cookElement = document.querySelector('.cook-time');
+            cookElement.innerHTML = recipe.readyInMinutes + '    Minutes';;
+            
+            const scoreDiv = document.querySelector('.score');
+            scoreDiv.innerHTML = `<li> Health score: ${recipe.healthScore}</li>
+                                  <li> For people: ${recipe.servings}</li>`;
 
             const ingredientsDiv = document.querySelector('.zhuti1');
             const methodDiv = document.querySelector('.zhuti2');
@@ -190,6 +206,7 @@
 
         }
     })
+
 </script>
-</body>
-</html>
+
+{% endblock %}
