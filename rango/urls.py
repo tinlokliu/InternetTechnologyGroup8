@@ -16,7 +16,7 @@ urlpatterns = [
     path('forgot/', views.forgot, name='forgot'),
     path('forgot_1/', views.forgot_1, name='forgot_1'),
     path('forgot_2/', views.forgot_2, name='forgot_2'),
-    path('ask_openai/', ask_openai, name='ask_openai'),
+    path('ask_openai/', views.ask_openai_view, name='ask_openai_view'),
     path('homepage/', views.homepage, name='homepage'),
     path('detail/', views.detail, name='detail'),
 ]
