@@ -20,5 +20,4 @@ from rango import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rango.urls')),
-    path('ask_openai/', views.ask_openai, name='ask_openai'),
 ]

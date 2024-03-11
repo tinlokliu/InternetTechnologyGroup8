@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token }}">
     <title>Cookify</title>
 
     <!-- Bootstrap setup -->
@@ -79,26 +80,36 @@
                 textBox.style.display = (textBox.style.display == "block") ? "none" : "block";
             }
             
-            // Function to submit the question to the Django backend and display the response
-            function submitQuestion() {
-                var question = document.getElementById("user-question").value;
-                fetch('/ask_openai/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFToken': getCookie('csrftoken') // Ensure CSRF token is included for Django
-                    },
-                    body: JSON.stringify({'question': question})
-                })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("user-question").value = data.answer; // Display answer in the textbox
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-            }
-            
+            // Modified function in base.html
+function submitQuestion() {
+    var question = document.getElementById("user-question").value;
+    var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    fetch('/ask_openai/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify({'question': question})
+    })
+    .then(response => response.json()) // Parsing response as JSON
+    .then(data => {
+        // Log data for debugging
+        console.log(data);
+        // Ensure 'data.answer' exists and is not 'undefined'
+        if(data.answer !== undefined) {
+            document.getElementById("user-question").value = data.answer; // Correctly targeting the element to display answer
+        } else {
+            // Handling cases where 'data.answer' might be undefined or not as expected
+            document.getElementById("user-question").value = "Could not get an answer.";
+        }
+    })
+    .catch((error) => {
+        // Handling any errors that occur during the fetch operation
+        console.error('Error:', error);
+    });
+}
+        
             // Function to get CSRF token
             function getCookie(name) {
                 let cookieValue = null;
