@@ -9,6 +9,10 @@
 
 {% block content-it %}
 <body>
+    <script type="text/javascript">
+        var catalogueUrl = "{% url 'rango:catalogue' %}";
+    </script>
+
     <section id="title">
         <div class="container-fluid">
 
@@ -157,49 +161,6 @@
         </div>
     </section>
     </div>
-
-    <script>
-        function redirectToAboutPage() {
-            const query = document.getElementById('search').value;
-            sessionStorage.setItem('query', JSON.stringify(query));
-            window.location.href = '{% url "rango:catalogue" %}';
-        }
-        document.getElementById('salad').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('salad'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('italian').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('italian'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('vegan').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('vegan'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('asian').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('asian'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('soups').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('soups'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('mexican').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('mexican'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('mediterranean').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('mediterranean'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('vegetarian').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('vegetarian'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-        document.getElementById('Breakfast,Brunch').addEventListener('click', function() {
-            sessionStorage.setItem('query', JSON.stringify('Breakfast,Brunch'));
-            window.location.href = '{% url "rango:catalogue" %}';
-        });
-    </script>
+    <script  src="{% static 'js/findRecipe.js' %}"></script>
 </body>
 {% endblock %}
