@@ -61,7 +61,7 @@ def catalogue(request):
     return render(request, 'rango/receipe-catalogue.html')
 
 def detail(request):
-    return render(request, 'rango/detail.html')
+    return render(request, 'rango/recipe.html')
 
 def login_view(request):
     if request.method == 'POST':
