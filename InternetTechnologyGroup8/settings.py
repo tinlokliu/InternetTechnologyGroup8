@@ -17,6 +17,18 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
+MY_SITE_DOMAIN = 'www.recipe.com'
+
+# settings.py
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Lc8spcpAAAAAFzbEYYcoC6AVnqz8mTJGXevFtUm'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'lyneee223@gmail.com'
+EMAIL_HOST_PASSWORD = 'espe lidi wynp jwtq'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'lyneee223@gmail.com'
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+
 ]
 
 MIDDLEWARE = [
@@ -135,10 +148,3 @@ PASSWORD_HASHERS = (
 'django.contrib.auth.hashers.PBKDF2PasswordHasher',
 'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 )
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.example.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'your_email@example.com'
-EMAIL_HOST_PASSWORD = 'your_email_password'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'your_email@example.com'

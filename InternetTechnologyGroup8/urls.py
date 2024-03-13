@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rango import views
+from django.contrib.auth.views import PasswordResetConfirmView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rango.urls')),
+# path('rango/', include('rango.urls', namespace='rango')),
 ]

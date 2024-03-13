@@ -23,8 +23,9 @@
                 <div class="col-md-8">
                     <!-- Right Column Content -->
                     <h1>Your Account</h1>
-                    <button type="button" class="btn btn-1">Change Password</button>
-                    <button type="button" class="btn btn-2">Delete Account</button>
+                    
+                   <a href="{% url 'rango:change_password_view' %}" class="btn btn-1">Change Password</a>
+                    <a href="{% url 'rango:DeleteAccount' %}" class="btn btn-2">Delete Account</a>
                     <!-- <button type="button" class="btn btn-3">Sign Out</button> -->
                     <a href="{% url 'rango:welcome' %}" class="btn btn-3">Sign Out</a>
                 </div>

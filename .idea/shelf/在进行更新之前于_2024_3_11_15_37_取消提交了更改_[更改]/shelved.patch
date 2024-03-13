@@ -1,0 +1,454 @@
+Index: templates/rango/forgot_2.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html style=\"font-size: 16px;\" lang=\"en\"><head>\r\n    <\r\n    <title>forgot-2</title>\r\n    <link rel=\"stylesheet\" href=\"{% static 'css/page.css' %}\" media=\"screen\">\r\n<link rel=\"stylesheet\" href=\"{% static 'css/forgot_2.css' %}\" media=\"screen\">\r\n    <script class=\"u-script\" type=\"text/javascript\" src=\"{% static 'css/forgot_2.css' %}\" defer=\"\"></script>\r\n    <script src=\"{% static 'js/forgot_2.js' %}\"></script>\r\n\r\n    <link id=\"u-theme-google-font\" rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i\">\r\n    <script type=\"application/ld+json\">{\r\n\t\t\"@context\": \"http://schema.org\",\r\n\t\t\"@type\": \"Organization\",\r\n\t\t\"name\": \"\"\r\n}</script>\r\n\r\n</head>\r\n  <body data-path-to-root=\"./\" data-include-products=\"true\" class=\"u-body u-xl-mode\" data-lang=\"en\"><header class=\"u-clearfix u-header u-header\" id=\"sec-8216\"><div class=\"u-clearfix u-sheet u-sheet-1\"></div></header>\r\n    <section class=\"u-clearfix u-lightbox u-section-1\" id=\"sec-f3ca\" >\r\n      <!-- data-href=\"https://nicepage.com\" -->\r\n      <div class=\"u-clearfix u-sheet u-sheet-1\">\r\n        <div class=\"u-expanded-width u-list u-list-1\">\r\n          <div class=\"u-repeater u-repeater-1\"></div>\r\n        </div>\r\n        <div class=\"data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1\">\r\n          <div class=\"u-layout\">\r\n            <div class=\"u-layout-row\">\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-1\">\r\n                <div class=\"u-container-layout u-container-layout-1\">\r\n                  <div class=\"u-image u-image-circle u-preserve-proportions u-image-1\" alt=\"\" data-image-width=\"1920\" data-image-height=\"1920\" data-animation-name=\"fadeIn\" data-animation-duration=\"2000\" data-animation-delay=\"0\"></div>\r\n                </div>\r\n              </div>\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-2\">\r\n                <div class=\"u-container-layout u-container-layout-2\">\r\n                  <div class=\"u-form u-form-1\">\r\n                    <form class=\"u-clearfix u-form-spacing-35 u-form-vertical u-inner-form\" source=\"email\" name=\"form\" style=\"padding: 30px;\">\r\n                      <p class=\"u-form-group u-form-text u-text u-text-1\"> Create a new password</p>\r\n                      <div class=\"u-form-group u-form-group-2\">\r\n                        <label for=\"text-195d\" class=\"u-label\">New password*</label>\r\n                        <input type=\"text\" placeholder=\"\" id=\"text-195d\" name=\"text-1\" class=\"u-input u-input-rectangle\">\r\n                      </div>\r\n                      <div class=\"u-form-group u-form-group-3\">\r\n                        <label for=\"text-a82a\" class=\"u-label\">Confirm password</label>\r\n                        <input type=\"text\" placeholder=\"\" id=\"text-a82a\" name=\"text\" class=\"u-input u-input-rectangle\">\r\n                      </div>\r\n                      <div class=\"u-align-center u-form-group u-form-submit\">\r\n                        <a href=\"#\" class=\"u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1\">Reset my password</a>\r\n                        <input type=\"submit\" value=\"submit\" class=\"u-form-control-hidden\">\r\n                      </div>\r\n                      <div class=\"u-form-send-message u-form-send-success\"> Thank you! Your message has been sent. </div>\r\n                      <div class=\"u-form-send-error u-form-send-message\"> Unable to send your message. Please fix errors then try again. </div>\r\n                      <input type=\"hidden\" value=\"\" name=\"recaptchaResponse\">\r\n                      <input type=\"hidden\" name=\"formServices\" value=\"c83941b3-042b-05f2-c4d8-2e12d91c8a01\">\r\n                    </form>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n    \r\n    \r\n\r\n</body></html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/rango/forgot_2.html b/templates/rango/forgot_2.html
+--- a/templates/rango/forgot_2.html	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/templates/rango/forgot_2.html	(date 1710123937044)
+@@ -1,7 +1,7 @@
+ <!DOCTYPE html>
+ <html style="font-size: 16px;" lang="en"><head>
+     <
+-    <title>forgot-2</title>
++    <title>resetPassword</title>
+     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
+ <link rel="stylesheet" href="{% static 'css/forgot_2.css' %}" media="screen">
+     <script class="u-script" type="text/javascript" src="{% static 'css/forgot_2.css' %}" defer=""></script>
+Index: templates/rango/forgot_1.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% load static %}\r\n<!DOCTYPE html>\r\n<html style=\"font-size: 16px;\" lang=\"en\"><head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"keywords\" content=\"\">\r\n    <meta name=\"description\" content=\"\">\r\n    <title>forgot1</title>\r\n    <link rel=\"stylesheet\" href=\"{% static 'css/page.css' %}\" media=\"screen\">\r\n<link rel=\"stylesheet\" href=\"{% static 'css/forgot_1.css' %}\" media=\"screen\">\r\n    <script class=\"u-script\" type=\"text/javascript\" src=\"{% static 'js/page.js' %}\" defer=\"\"></script>\r\n   \r\n    <link id=\"u-theme-google-font\" rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i\">\r\n    \r\n    \r\n    \r\n    <script type=\"application/ld+json\">{\r\n\t\t\"@context\": \"http://schema.org\",\r\n\t\t\"@type\": \"Organization\",\r\n\t\t\"name\": \"\"\r\n}</script>\r\n    </head>\r\n  <body data-path-to-root=\"./\" data-include-products=\"true\" class=\"u-body u-xl-mode\" data-lang=\"en\"><header class=\"u-clearfix u-header u-header\" id=\"sec-8216\"><div class=\"u-clearfix u-sheet u-sheet-1\"></div></header>\r\n    <section class=\"u-clearfix u-lightbox u-section-1\" id=\"sec-f3ca\" >\r\n      <div class=\"u-clearfix u-sheet u-sheet-1\">\r\n        <div class=\"u-expanded-width u-list u-list-1\">\r\n          <div class=\"u-repeater u-repeater-1\"></div>\r\n        </div>\r\n        <div class=\"data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1\">\r\n          <div class=\"u-layout\">\r\n            <div class=\"u-layout-row\">\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-1\">\r\n                <div class=\"u-container-layout u-container-layout-1\">\r\n                  <div class=\"u-image u-image-circle u-preserve-proportions u-image-1\" alt=\"\" data-image-width=\"1920\" data-image-height=\"1920\" data-animation-name=\"fadeIn\" data-animation-duration=\"2000\" data-animation-delay=\"0\"></div>\r\n                </div>\r\n              </div>\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-2\">\r\n                <div class=\"u-container-layout u-container-layout-2\">\r\n                  <div class=\"u-form u-form-1\">\r\n                    <form class=\"u-clearfix u-form-spacing-35 u-form-vertical u-inner-form\" source=\"email\" name=\"form\" style=\"padding: 30px;\">\r\n                      <p class=\"u-form-group u-form-text u-text u-text-1\"> Forgotten your password? </p>\r\n                      <p class=\"u-form-group u-form-text u-text u-text-2\"> You should receive an email in a few minutes, asking you to reset your password. If you don't receive it, double-check your email address and&nbsp;try again</p>\r\n                      <div class=\"u-align-center u-form-group u-form-submit\">\r\n                        <a href=\"{% url 'rango:forgot' %}\" class=\"u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1\">try again</a>\r\n                        <input type=\"submit\" value=\"submit\" class=\"u-form-control-hidden\">\r\n                      </div>\r\n                      <div class=\"u-form-send-message u-form-send-success\"> Thank you! Your message has been sent. </div>\r\n                      <div class=\"u-form-send-error u-form-send-message\"> Unable to send your message. Please fix errors then try again. </div>\r\n                      <input type=\"hidden\" value=\"\" name=\"recaptchaResponse\">\r\n                      <input type=\"hidden\" name=\"formServices\" value=\"c83941b3-042b-05f2-c4d8-2e12d91c8a01\">\r\n                    </form>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n    \r\n  \r\n</body></html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/rango/forgot_1.html b/templates/rango/forgot_1.html
+--- a/templates/rango/forgot_1.html	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/templates/rango/forgot_1.html	(date 1710123919006)
+@@ -5,7 +5,7 @@
+     <meta charset="utf-8">
+     <meta name="keywords" content="">
+     <meta name="description" content="">
+-    <title>forgot1</title>
++    <title>waitForEmail</title>
+     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
+ <link rel="stylesheet" href="{% static 'css/forgot_1.css' %}" media="screen">
+     <script class="u-script" type="text/javascript" src="{% static 'js/page.js' %}" defer=""></script>
+Index: rango/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import json\r\n# import requests\r\nfrom django.http import JsonResponse\r\nfrom django.views.decorators.csrf import csrf_exempt\r\nfrom django.shortcuts import render\r\nimport openai\r\nfrom django.contrib.auth import authenticate, login as auth_login\r\nfrom django.shortcuts import redirect\r\nfrom django.contrib.auth.decorators import login_required\r\nfrom django.contrib.auth.models import User\r\nfrom django.contrib.auth import login\r\nfrom django.contrib import messages\r\n\r\ndef homepage(request):\r\n    return render(request, 'rango/homepage1.html')\r\ndef about(request):\r\n    return render(request, 'rango/about.html')\r\n\r\ndef profile(request):\r\n    return render(request, 'rango/profile.html')\r\n\r\ndef forgot(request):\r\n    return render(request,'rango/forgot.html' )\r\ndef forgot_1(request):\r\n    return render(request,'rango/forgot_1.html' )\r\ndef forgot_2(request):\r\n    return render(request,'rango/forgot_2.html' )\r\n\r\ndef catalogue(request):\r\n    return render(request, 'rango/receipe-catalogue.html')\r\n\r\ndef detail(request):\r\n    return render(request, 'rango/detail.html')\r\n\r\ndef login_view(request):\r\n    if request.method == 'POST':\r\n        username = request.POST.get('username')\r\n        password = request.POST.get('password')\r\n        user = authenticate(request, username=username, password=password)\r\n        if user is not None:\r\n            auth_login(request, user)\r\n            return redirect('rango:homepage')  # Adjust the namespace and view name as necessary\r\n        else:\r\n            # Return an error message to the login form\r\n            return render(request, 'rango/login.html', {'error': 'Invalid credentials. Please try again.'})\r\n    return render(request, 'rango/login.html')  # Adjust the path to your login template\r\n\r\ndef signup(request):\r\n    return render(request, 'rango/sign.html')\r\n\r\ndef register(request):\r\n    \r\n    if request.method == 'POST':\r\n\r\n        username = request.POST['username']\r\n        email = request.POST['email']\r\n        password = request.POST['password']\r\n        confirm_password = request.POST['confirm']\r\n        \r\n        if password == confirm_password:\r\n            try:\r\n                user = User.objects.create_user(username, email, password)\r\n                user.save()\r\n                login(request, user)  \r\n                return redirect('rango:login')  \r\n            except Exception as e:\r\n                messages.error(request, f\"Error creating account: {e}\")\r\n        else:\r\n            messages.error(request, \"Password and confirm password do not match\")\r\n    \r\n    return render(request, 'rango/sign.html', {})\r\n\r\ndef welcome(request):\r\n    return render(request, 'rango/welcome.html')\r\n\r\n@csrf_exempt\r\ndef ask_openai(request):\r\n    if request.method == \"POST\":\r\n        question = json.loads(request.body).get('question', '')\r\n        openai.api_key = settings.OPENAI_API_KEY\r\n\r\n        response = openai.Completion.create(\r\n            engine=\"text-davinci-003\",\r\n            prompt=question,\r\n            temperature=0.7,\r\n            max_tokens=150,\r\n            top_p=1.0,\r\n            frequency_penalty=0.0,\r\n            presence_penalty=0.0\r\n        )\r\n        return JsonResponse({'answer': response.choices[0].text.strip()})\r\n    else:\r\n        return JsonResponse({'error': 'Method not allowed'}, status=405)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/rango/views.py b/rango/views.py
+--- a/rango/views.py	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/rango/views.py	(date 1710171130768)
+@@ -1,4 +1,7 @@
+ import json
++
++from django.conf import settings
++from django.contrib.auth.forms import PasswordResetForm
+ # import requests
+ from django.http import JsonResponse
+ from django.views.decorators.csrf import csrf_exempt
+@@ -10,6 +13,14 @@
+ from django.contrib.auth.models import User
+ from django.contrib.auth import login
+ from django.contrib import messages
++from django.core.mail import send_mail
++from django.shortcuts import redirect, render
++from django.contrib import messages
++from django.contrib.auth.models import User
++from django.urls import reverse
++from django.contrib.auth.tokens import default_token_generator
++from django.utils.http import urlsafe_base64_encode
++
+ 
+ def homepage(request):
+     return render(request, 'rango/homepage1.html')
+@@ -20,7 +31,56 @@
+     return render(request, 'rango/profile.html')
+ 
+ def forgot(request):
+-    return render(request,'rango/forgot.html' )
++
++    return render(request, 'rango/forgot.html')
++def forgot_password_request(request):
++    if request.method == 'POST':
++        form = PasswordResetForm(request.POST)
++        # if the email address is associated with a user,
++        # Django's PasswordResetForm's save() method will send an email to that address
++        # using the password_reset_email.html template.(this is not need to show on the website, it's email contend )
++        if form.is_valid():
++            opts = {
++                'use_https': request.is_secure(),
++                'token_generator': default_token_generator,
++                'from_email': settings.DEFAULT_FROM_EMAIL,
++                'email_template_name': 'rango/password_reset_email.html',
++                'subject_template_name': 'rango/password_reset_subject_name.txt',
++                'request': request,
++            }
++            form.save(**opts)
++            messages.success(request, 'We have sent your an email to reset your password')
++            return redirect('rango:forgot_1')
++    # redirect to a page which tell user that the email has been sent
++    else:
++        # handel GET response
++        form = PasswordResetForm()
++    # whether fail verification or success , render again
++    return  render(request,'rango/forgot.html',{'form':form})
++
++
++def forgot_2(request, uidb64,token):
++    try:
++        # uidb64转换为用户的id
++        uid = urlsafe_base64_decode(uidb64).decode()
++        user = User.objects.get(pk=uid)
++    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
++        user = None
++
++    if user is not None and default_token_generator.check_token(user, token):
++        # 用户验证成功，可以在此显示重置密码的表单
++        # 如果是POST请求，还需要处理表单提交并更新密码
++        if request.method == 'POST':
++            new_password = request.POST.get('new_password')
++            user.set_password(new_password)
++            user.save()
++            return redirect('login_url')  # 重定向到登录页面或其他页面
++        else:
++            return render(request, 'forgot_2.html', {'form': form})
++    else:
++        # 用户验证失败，显示错误或重定向到其他页面
++        return render(request, 'invalid_link.html')  # 或重定向到错误提示页面
++
+ def forgot_1(request):
+     return render(request,'rango/forgot_1.html' )
+ def forgot_2(request):
+Index: templates/rango/forgot.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% load static %}\r\n<!DOCTYPE html>\r\n<html style=\"font-size: 16px;\" lang=\"en\"><head>\r\n   \r\n    <title>Forgotten</title>\r\n    <link rel=\"stylesheet\" href=\"{% static 'css/page.css' %}\" media=\"screen\">\r\n<link rel=\"stylesheet\" href=\"{% static 'css/forgot.css' %}\" media=\"screen\">\r\n    <script class=\"u-script\" type=\"text/javascript\" src=\"page.js\" defer=\"\"></script>\r\n    <link id=\"u-theme-google-font\" rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i\">\r\n    <script type=\"application/ld+json\">{\r\n\t\t\"@context\": \"http://schema.org\",\r\n\t\t\"@type\": \"Organization\",\r\n\t\t\"name\": \"\"\r\n}</script>\r\n<script>\r\n  document.addEventListener('DOMContentLoaded', function() {\r\n      var emailInput = document.getElementById('email-eb97');\r\n      emailInput.addEventListener('blur', function() {\r\n          var errorMessage = document.createElement('div');\r\n          errorMessage.style.color = 'red';\r\n          var emailValue = emailInput.value;\r\n          var emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\r\n          var errorElement = emailInput.nextElementSibling;\r\n  \r\n          // 移除之前的错误消息\r\n          if (errorElement) {\r\n              emailInput.parentNode.removeChild(errorElement);\r\n          }\r\n  \r\n          // 验证邮箱是否为空或格式不正确\r\n          if (!emailValue) {\r\n              errorMessage.textContent = 'Please enter your email address.';\r\n              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);\r\n          } else if (!emailPattern.test(emailValue)) {\r\n              errorMessage.textContent = 'Please enter a valid email address.';\r\n              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);\r\n          }\r\n      });\r\n  });\r\n  </script>\r\n  </head>\r\n  <body data-path-to-root=\"./\" data-include-products=\"true\" class=\"u-body u-xl-mode\" data-lang=\"en\"><header class=\"u-clearfix u-header u-header\" id=\"sec-8216\"><div class=\"u-clearfix u-sheet u-sheet-1\"></div></header>\r\n    <section class=\"u-clearfix u-lightbox u-section-1\" id=\"sec-f3ca\" >\r\n      <div class=\"u-clearfix u-sheet u-sheet-1\">\r\n        <div class=\"u-expanded-width u-list u-list-1\">\r\n          <div class=\"u-repeater u-repeater-1\"></div>\r\n        </div>\r\n        <div class=\"data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1\">\r\n          <div class=\"u-layout\">\r\n            <div class=\"u-layout-row\">\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-1\">\r\n                <div class=\"u-container-layout u-container-layout-1\">\r\n                  <div class=\"u-image u-image-circle u-preserve-proportions u-image-1\" alt=\"\" data-image-width=\"1920\" data-image-height=\"1920\" data-animation-name=\"fadeIn\" data-animation-duration=\"2000\" data-animation-delay=\"0\"></div>\r\n                </div>\r\n              </div>\r\n              <div class=\"u-container-style u-layout-cell u-size-30 u-layout-cell-2\">\r\n                <div class=\"u-container-layout u-container-layout-2\">\r\n                  <div class=\"u-form u-form-1\">\r\n                    <form  class=\"u-clearfix u-form-spacing-35 u-form-vertical u-inner-form\" source=\"email\" name=\"form\" style=\"padding: 30px;\">\r\n                      <p class=\"u-form-group u-form-text u-text u-text-1\"> Forgotten your password? </p>\r\n                      <p class=\"u-form-group u-form-text u-text u-text-2\"> No problem. Simply add your email address below (make sure you use the one you signed up with) and we'll send you a link to reset your password. </p>\r\n                      <div class=\"u-form-email u-form-group u-form-group-3\">\r\n                        <label for=\"email-eb97\" class=\"u-label\">Email*</label>\r\n                        <input type=\"email\" placeholder=\"Enter a valid email address\" id=\"email-eb97\" name=\"email\" class=\"u-input u-input-rectangle\" required=\"\">\r\n                      </div>\r\n                      <div class=\"u-align-center u-form-group u-form-submit\">\r\n                        <a href=\"{% url 'rango:forgot_1' %}\" class=\"u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1\">Reset my password </a>\r\n                        <input type=\"submit\" value=\"submit\" class=\"u-form-control-hidden\">\r\n                      </div>\r\n                      <div class=\"u-form-send-message u-form-send-success\"> Thank you! Your message has been sent. </div>\r\n                      <div class=\"u-form-send-error u-form-send-message\"> Unable to send your message. Please fix errors then try again. </div>\r\n                      <input type=\"hidden\" value=\"\" name=\"recaptchaResponse\">\r\n                      <input type=\"hidden\" name=\"formServices\" value=\"c83941b3-042b-05f2-c4d8-2e12d91c8a01\">\r\n                    </form>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n    \r\n    \r\n    \r\n  \r\n  \r\n</body></html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/rango/forgot.html b/templates/rango/forgot.html
+--- a/templates/rango/forgot.html	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/templates/rango/forgot.html	(date 1710166827437)
+@@ -1,88 +1,125 @@
+ {% load static %}
+ <!DOCTYPE html>
+-<html style="font-size: 16px;" lang="en"><head>
+-   
++<html style="font-size: 16px;" lang="en">
++<head>
++
+     <title>Forgotten</title>
+     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
+-<link rel="stylesheet" href="{% static 'css/forgot.css' %}" media="screen">
++    <link rel="stylesheet" href="{% static 'css/forgot.css' %}" media="screen">
+     <script class="u-script" type="text/javascript" src="page.js" defer=""></script>
+-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
++    <link id="u-theme-google-font" rel="stylesheet"
++          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+     <script type="application/ld+json">{
+ 		"@context": "http://schema.org",
+ 		"@type": "Organization",
+ 		"name": ""
+ }</script>
+-<script>
+-  document.addEventListener('DOMContentLoaded', function() {
+-      var emailInput = document.getElementById('email-eb97');
+-      emailInput.addEventListener('blur', function() {
+-          var errorMessage = document.createElement('div');
+-          errorMessage.style.color = 'red';
+-          var emailValue = emailInput.value;
+-          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+-          var errorElement = emailInput.nextElementSibling;
+-  
+-          // 移除之前的错误消息
+-          if (errorElement) {
+-              emailInput.parentNode.removeChild(errorElement);
+-          }
+-  
+-          // 验证邮箱是否为空或格式不正确
+-          if (!emailValue) {
+-              errorMessage.textContent = 'Please enter your email address.';
+-              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+-          } else if (!emailPattern.test(emailValue)) {
+-              errorMessage.textContent = 'Please enter a valid email address.';
+-              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+-          }
+-      });
+-  });
+-  </script>
+-  </head>
+-  <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8216"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
+-    <section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca" >
+-      <div class="u-clearfix u-sheet u-sheet-1">
++    <script>
++        document.addEventListener('DOMContentLoaded', function () {
++            var emailInput = document.getElementById('email-eb97');
++            emailInput.addEventListener('blur', function () {
++                var errorMessage = document.createElement('div');
++                errorMessage.style.color = 'red';
++                var emailValue = emailInput.value;
++                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
++                var errorElement = emailInput.nextElementSibling;
++
++                // remove wrong message before
++                if (errorElement) {
++                    emailInput.parentNode.removeChild(errorElement);
++                }
++
++                // Verify that the mailbox is empty or incorrectly formatted
++                if (!emailValue) {
++                    errorMessage.textContent = 'Please enter your email address.';
++                    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
++                } else if (!emailPattern.test(emailValue)) {
++                    errorMessage.textContent = 'Please enter a valid email address.';
++                    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
++                }
++            });
++        });
++    </script>
++</head>
++<body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en">
++<header class="u-clearfix u-header u-header" id="sec-8216">
++    <div class="u-clearfix u-sheet u-sheet-1"></div>
++</header>
++<section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca">
++    <div class="u-clearfix u-sheet u-sheet-1">
+         <div class="u-expanded-width u-list u-list-1">
+-          <div class="u-repeater u-repeater-1"></div>
++            <div class="u-repeater u-repeater-1"></div>
+         </div>
+         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+-          <div class="u-layout">
+-            <div class="u-layout-row">
+-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+-                <div class="u-container-layout u-container-layout-1">
+-                  <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"></div>
+-                </div>
+-              </div>
+-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+-                <div class="u-container-layout u-container-layout-2">
+-                  <div class="u-form u-form-1">
+-                    <form  class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
+-                      <p class="u-form-group u-form-text u-text u-text-1"> Forgotten your password? </p>
+-                      <p class="u-form-group u-form-text u-text u-text-2"> No problem. Simply add your email address below (make sure you use the one you signed up with) and we'll send you a link to reset your password. </p>
+-                      <div class="u-form-email u-form-group u-form-group-3">
+-                        <label for="email-eb97" class="u-label">Email*</label>
+-                        <input type="email" placeholder="Enter a valid email address" id="email-eb97" name="email" class="u-input u-input-rectangle" required="">
+-                      </div>
+-                      <div class="u-align-center u-form-group u-form-submit">
+-                        <a href="{% url 'rango:forgot_1' %}" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">Reset my password </a>
+-                        <input type="submit" value="submit" class="u-form-control-hidden">
+-                      </div>
+-                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+-                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+-                      <input type="hidden" value="" name="recaptchaResponse">
+-                      <input type="hidden" name="formServices" value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
+-                    </form>
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
+-          </div>
++            <div class="u-layout">
++                <div class="u-layout-row">
++                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
++                        <div class="u-container-layout u-container-layout-1">
++                            <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt=""
++                                 data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn"
++                                 data-animation-duration="2000" data-animation-delay="0"></div>
++                        </div>
++                    </div>
++                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
++                        <div class="u-container-layout u-container-layout-2">
++                            <div class="u-form u-form-1">
++                                <form method="post" action="{% url 'rango:forgot_password_request' %}"
++                                      class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email"
++                                      name="form" style="padding: 30px;">
++                                    {% csrf_token %}
++                                    <p class="u-form-group u-form-text u-text u-text-1"> Forgotten your password? </p>
++                                    <p class="u-form-group u-form-text u-text u-text-2"> No problem. Simply add your
++                                        email address below (make sure you use the one you signed up with) and we'll
++                                        send you a link to reset your password. </p>
++                                    <div class="u-form-email u-form-group u-form-group-3">
++                                        {#                                        {{ form.email.label_tag(attrs={'class': 'u-label'}) }}#}
++                                        {#                                        {{ form.email(attrs={'class': 'u-input u-input-rectangle', #}
++                                        {#                                                'placeholder': 'Enter a valid email address', 'id': 'email-eb97'}) }}#}
++                                        {#                                        {% if form.email.errors %}#}
++                                        {#                                            <div class="alert alert-danger" role="alert">#}
++                                        {#                                                {% for error in form.email.errors %}#}
++                                        {#                                                    <p>{{ error }}</p>#}
++                                        {#                                                {% endfor %}#}
++                                        {#                                            </div>#}
++                                        {#                                        {% endif %}#}
++                                        <label for="email-eb97" class="u-label">Email*</label>
++                                        <input type="email" placeholder="Enter a valid email address" id="email-eb97"
++                                               name="email" class="u-input u-input-rectangle" required="">
++                                    </div>
++                                    <div class="u-align-center u-form-group u-form-submit">
++                                        <button type="submit"
++                                                class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">
++                                            Reset my password
++                                        </button>
++                                        <input type="submit" value="submit" class="u-form-control-hidden">
++                                    </div>
++                                    {% if form.email.errors %}
++                                        <div class="alert alert-danger" role="alert">
++                                            {% for error in form.email.errors %}
++                                                <p>{{ error }}</p>
++                                            {% endfor %}
++                                        </div>
++                                    {% endif %}
++
++                                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has
++                                        been sent.
++                                    </div>
++                                    <div class="u-form-send-error u-form-send-message"> Unable to send your message.
++                                        Please fix errors then try again.
++                                    </div>
++                                    <input type="hidden" value="" name="recaptchaResponse">
++                                    <input type="hidden" name="formServices"
++                                           value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
++                                </form>
++                            </div>
++                        </div>
++                    </div>
++                </div>
++            </div>
+         </div>
+-      </div>
+-    </section>
+-    
+-    
+-    
+-  
+-  
+-</body></html>
+\ No newline at end of file
++    </div>
++</section>
++
++
++</body>
++</html>
+\ No newline at end of file
+Index: static/css/forgot.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.u-section-1 .u-sheet-1 {\r\n  min-height: 767px;\r\n}\r\n\r\n.u-section-1 .u-list-1 {\r\n  margin-bottom: 0;\r\n  margin-top: 58px;\r\n}\r\n\r\n.u-section-1 .u-repeater-1 {\r\n  grid-gap: 10px 10px;\r\n  grid-auto-columns: 100%;\r\n  min-height: 375px;\r\n}\r\n\r\n.u-section-1 .u-layout-wrap-1 {\r\n  margin-top: -327px;\r\n  margin-bottom: 38px;\r\n}\r\n\r\n.u-section-1 .u-layout-cell-1 {\r\n  min-height: 623px;\r\n}\r\n\r\n.u-section-1 .u-container-layout-1 {\r\n  padding: 30px;\r\n}\r\n\r\n.u-section-1 .u-image-1 {\r\n  width: 376px;\r\n  height: 376px;\r\n  background-image: url(\"../images/login.jpg\");\r\n  background-position: 50% 50%;\r\n  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);\r\n  margin: 55px auto 0;\r\n}\r\n\r\n.u-section-1 .u-layout-cell-2 {\r\n  min-height: 624px;\r\n}\r\n\r\n.u-section-1 .u-container-layout-2 {\r\n  padding: 30px;\r\n}\r\n\r\n.u-section-1 .u-form-1 {\r\n  height: 564px;\r\n  width: 510px;\r\n  margin: 53px 0 0;\r\n}\r\n\r\n.u-section-1 .u-text-1 {\r\n  margin-left: 0;\r\n  font-weight: 700;\r\n}\r\n\r\n.u-section-1 .u-text-2 {\r\n  margin-left: 0;\r\n  font-size: 1rem;\r\n}\r\n\r\n.u-section-1 .u-form-group-3 {\r\n  margin-left: 0;\r\n}\r\n\r\n.u-section-1 .u-btn-1 {\r\n  --radius: 50px;\r\n  padding: 10px 147px 10px 145px;\r\n}\r\n\r\n@media (max-width: 1199px) {\r\n  .u-section-1 .u-sheet-1 {\r\n    min-height: 658px;\r\n  }\r\n\r\n  .u-section-1 .u-repeater-1 {\r\n    grid-auto-columns: NaN%;\r\n    grid-template-columns: repeat(undefined, NaN%);\r\n    min-height: NaNpx;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-1 {\r\n    min-height: 514px;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-2 {\r\n    min-height: 515px;\r\n  }\r\n\r\n  .u-section-1 .u-form-1 {\r\n    width: 410px;\r\n  }\r\n\r\n  .u-section-1 .u-text-1 {\r\n    font-size: 1.125rem;\r\n  }\r\n}\r\n\r\n@media (max-width: 991px) {\r\n  .u-section-1 .u-sheet-1 {\r\n    min-height: 538px;\r\n  }\r\n\r\n  .u-section-1 .u-repeater-1 {\r\n    grid-auto-columns: 100%;\r\n    grid-template-columns: 100%;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-1 {\r\n    min-height: 394px;\r\n  }\r\n\r\n  .u-section-1 .u-image-1 {\r\n    width: 300px;\r\n    height: 300px;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-2 {\r\n    min-height: 100px;\r\n  }\r\n\r\n  .u-section-1 .u-form-1 {\r\n    width: 300px;\r\n  }\r\n}\r\n\r\n@media (max-width: 767px) {\r\n  .u-section-1 .u-sheet-1 {\r\n    min-height: 1414px;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-1 {\r\n    min-height: 591px;\r\n  }\r\n\r\n  .u-section-1 .u-container-layout-1 {\r\n    padding-left: 10px;\r\n    padding-right: 10px;\r\n  }\r\n\r\n  .u-section-1 .u-container-layout-2 {\r\n    padding-left: 10px;\r\n    padding-right: 10px;\r\n  }\r\n\r\n  .u-section-1 .u-text-1 {\r\n    font-size: 1rem;\r\n  }\r\n}\r\n\r\n@media (max-width: 575px) {\r\n  .u-section-1 .u-sheet-1 {\r\n    min-height: 976px;\r\n  }\r\n\r\n  .u-section-1 .u-layout-cell-1 {\r\n    min-height: 372px;\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/static/css/forgot.css b/static/css/forgot.css
+--- a/static/css/forgot.css	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/static/css/forgot.css	(date 1710165395381)
+@@ -156,4 +156,11 @@
+   .u-section-1 .u-layout-cell-1 {
+     min-height: 372px;
+   }
+-}
+\ No newline at end of file
++}
++.error {
++  color: red;
++  border: 1px solid red;
++  padding: 5px;
++  margin: 10px 0;
++  border-radius: 5px;
++}
+Index: InternetTechnologyGroup8/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nDjango settings for InternetTechnologyGroup8 project.\r\n\r\nGenerated by 'django-admin startproject' using Django 2.1.5.\r\n\r\nFor more information on this file, see\r\nhttps://docs.djangoproject.com/en/2.1/topics/settings/\r\n\r\nFor the full list of settings and their values, see\r\nhttps://docs.djangoproject.com/en/2.1/ref/settings/\r\n\"\"\"\r\n\r\nimport os\r\n\r\n# Build paths inside the project like this: os.path.join(BASE_DIR, ...)\r\nBASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\r\nTEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')\r\nSTATIC_DIR = os.path.join(BASE_DIR, 'static')\r\n\r\n\r\n# Quick-start development settings - unsuitable for production\r\n# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/\r\n\r\n# SECURITY WARNING: keep the secret key used in production secret!\r\nSECRET_KEY = 'm0ox9a63*w(wusx)q3qof=bo$b$hqe$)vw$l!i1btr1z)x-z5@'\r\n\r\n# SECURITY WARNING: don't run with debug turned on in production!\r\nDEBUG = True\r\n\r\nALLOWED_HOSTS = ['tinlok.pythonanywhere.com', '127.0.0.1']\r\n\r\n\r\n# Application definition\r\n\r\nINSTALLED_APPS = [\r\n    'django.contrib.admin',\r\n    'django.contrib.auth',\r\n    'django.contrib.contenttypes',\r\n    'django.contrib.sessions',\r\n    'django.contrib.messages',\r\n    'django.contrib.staticfiles',\r\n    'rango',\r\n]\r\n\r\nMIDDLEWARE = [\r\n    'django.middleware.security.SecurityMiddleware',\r\n    'django.contrib.sessions.middleware.SessionMiddleware',\r\n    'django.middleware.common.CommonMiddleware',\r\n    'django.middleware.csrf.CsrfViewMiddleware',\r\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\r\n    'django.contrib.messages.middleware.MessageMiddleware',\r\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\r\n]\r\n\r\nROOT_URLCONF = 'InternetTechnologyGroup8.urls'\r\n\r\nTEMPLATES = [\r\n    {\r\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\r\n        'DIRS': [TEMPLATE_DIR,],\r\n        'APP_DIRS': True,\r\n        'OPTIONS': {\r\n            'context_processors': [\r\n                'django.template.context_processors.debug',\r\n                'django.template.context_processors.request',\r\n                'django.contrib.auth.context_processors.auth',\r\n                'django.contrib.messages.context_processors.messages',\r\n            ],\r\n        },\r\n    },\r\n]\r\n\r\nWSGI_APPLICATION = 'InternetTechnologyGroup8.wsgi.application'\r\n\r\n\r\n# Database\r\n# https://docs.djangoproject.com/en/2.1/ref/settings/#databases\r\n\r\nDATABASES = {\r\n    'default': {\r\n        'ENGINE': 'django.db.backends.sqlite3',\r\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  #used to be db.sqlite3\r\n    }\r\n}\r\n\r\n\r\n# Password validation\r\n# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators\r\n\r\nAUTH_PASSWORD_VALIDATORS = [\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\r\n    },\r\n]\r\n\r\n\r\n# Internationalization\r\n# https://docs.djangoproject.com/en/2.1/topics/i18n/\r\n\r\nLANGUAGE_CODE = 'en-us'\r\n\r\nTIME_ZONE = 'UTC'\r\n\r\nUSE_I18N = True\r\n\r\nUSE_L10N = True\r\n\r\nUSE_TZ = True\r\n\r\n\r\n# Static files (CSS, JavaScript, Images)\r\n# https://docs.djangoproject.com/en/2.1/howto/static-files/\r\n\r\nSTATIC_URL = '/static/'\r\n \r\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\r\n \r\nSTATICFILES_DIRS = [\r\n    os.path.join(BASE_DIR, 'static'),  # Make sure this is the correct path to your static directory\r\n]\r\n\r\nAPPEND_SLASH = False\r\n\r\nPASSWORD_HASHERS = (\r\n'django.contrib.auth.hashers.PBKDF2PasswordHasher',\r\n'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',\r\n)\r\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\r\nEMAIL_HOST = 'smtp.example.com'\r\nEMAIL_PORT = 587\r\nEMAIL_HOST_USER = 'your_email@example.com'\r\nEMAIL_HOST_PASSWORD = 'your_email_password'\r\nEMAIL_USE_TLS = True\r\nDEFAULT_FROM_EMAIL = 'your_email@example.com'
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/InternetTechnologyGroup8/settings.py b/InternetTechnologyGroup8/settings.py
+--- a/InternetTechnologyGroup8/settings.py	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/InternetTechnologyGroup8/settings.py	(date 1710168187007)
+@@ -135,9 +135,9 @@
+ 'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+ )
+ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+-EMAIL_HOST = 'smtp.example.com'
++EMAIL_HOST = 'smtp.163.com'
+ EMAIL_PORT = 587
+-EMAIL_HOST_USER = 'your_email@example.com'
+-EMAIL_HOST_PASSWORD = 'your_email_password'
++EMAIL_HOST_USER = 'my_recipe@163.com'
++EMAIL_HOST_PASSWORD = 'M5hx5-QU3avqNeF'
+ EMAIL_USE_TLS = True
+-DEFAULT_FROM_EMAIL = 'your_email@example.com'
+\ No newline at end of file
++DEFAULT_FROM_EMAIL = 'my_recipe@163.com'
+\ No newline at end of file
+Index: rango/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.urls import path\r\nfrom rango import views\r\nfrom rango.views import ask_openai\r\nfrom . import views\r\n\r\napp_name ='rango'\r\n\r\nurlpatterns = [\r\n    path('', views.welcome, name='welcome'),\r\n    path('about/', views.about, name='about'),\r\n    path('profile/', views.profile, name='profile'),\r\n    path('catalogue/', views.catalogue, name='catalogue'),\r\n    path('login/', views.login_view, name='login'),\r\n    path('signup/', views.signup, name='signup'),\r\n    path('register/', views.register, name='register'),\r\n    path('forgot/', views.forgot, name='forgot'),\r\n    path('forgot_1/', views.forgot_1, name='forgot_1'),\r\n    path('forgot_2/', views.forgot_2, name='forgot_2'),\r\n    path('ask_openai/', ask_openai, name='ask_openai'),\r\n    path('homepage/', views.homepage, name='homepage'),\r\n    path('detail/', views.detail, name='detail'),\r\n]
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/rango/urls.py b/rango/urls.py
+--- a/rango/urls.py	(revision d4d58583e51fd5f04ffca6f36d69f2d1ad838eee)
++++ b/rango/urls.py	(date 1710168906978)
+@@ -13,10 +13,12 @@
+     path('login/', views.login_view, name='login'),
+     path('signup/', views.signup, name='signup'),
+     path('register/', views.register, name='register'),
++    path('password_reset_email/', views.forgot_password_request, name='forgot_password_request'),
+     path('forgot/', views.forgot, name='forgot'),
+     path('forgot_1/', views.forgot_1, name='forgot_1'),
+     path('forgot_2/', views.forgot_2, name='forgot_2'),
+     path('ask_openai/', ask_openai, name='ask_openai'),
+     path('homepage/', views.homepage, name='homepage'),
+     path('detail/', views.detail, name='detail'),
++    path('reset/<uidb64>/<token>/',views.forgot_2, name='password_reset_confirm'),
+ ]
+\ No newline at end of file
+Index: templates/rango/password_reset_email.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/rango/password_reset_email.html b/templates/rango/password_reset_email.html
+new file mode 100644
+--- /dev/null	(date 1710168483870)
++++ b/templates/rango/password_reset_email.html	(date 1710168483870)
+@@ -0,0 +1,18 @@
++<!-- templates/registration/password_reset_email.html -->
++
++{% autoescape off %}
++Hello,
++
++You're receiving this email because you requested a password reset for your user account at {{ site_name }}.
++
++Please go to the following page and choose a new password:
++{% block reset_link %}
++{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
++{% endblock %}
++
++Your username, in case you've forgotten: {{ user.get_username }}
++
++Thanks for using our site!
++
++The {{ site_name }} team
++{% endautoescape %}
+Index: templates/rango/password_reset_subject_name.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/rango/password_reset_subject_name.txt b/templates/rango/password_reset_subject_name.txt
+new file mode 100644
+--- /dev/null	(date 1710161832187)
++++ b/templates/rango/password_reset_subject_name.txt	(date 1710161832187)
+@@ -0,0 +1,1 @@
++Password reset for {{ site_name }}
