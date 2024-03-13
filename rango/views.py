@@ -30,13 +30,12 @@ from openai import OpenAI
 from chatGPT import ask_openai
 from django.contrib.auth.views import PasswordResetConfirmView
 class MyPasswordResetConfirmView(PasswordResetConfirmView):
-    template_name = 'rango/forgot_2.html'  # 指定你的自定义模板路径
+    template_name = 'rango/forgot_2.html'
 
     def get_context_data(self, **kwargs):
-        # 首先，调用父类的 get_context_data 方法获取现有的上下文数据
+
         context = super().get_context_data(**kwargs)
-        # 你可以在这里添加或修改上下文数据
-        # 例如，确保 uidb64 和 token 被添加到上下文中（通常这一步是不必要的，因为它们已经由 Django 自动处理）
+
         context['uidb64'] = self.kwargs.get('uidb64')
         context['token'] = self.kwargs.get('token')
         return context
@@ -106,7 +105,7 @@ def welcome(request):
     return render(request, 'rango/welcome.html')
 def get_context_data(self, **kwargs):
     context = super().get_context_data(**kwargs)
-    print(context['uidb64'])  # 日志打印或设置断点
+    print(context['uidb64'])
     print(context['token'])
     return context
 

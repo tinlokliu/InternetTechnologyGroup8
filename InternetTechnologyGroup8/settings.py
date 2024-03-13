@@ -19,6 +19,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MY_SITE_DOMAIN = 'www.recipe.com'
 
+# settings.py
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Lc8spcpAAAAAFzbEYYcoC6AVnqz8mTJGXevFtUm'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

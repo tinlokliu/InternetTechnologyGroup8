@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     function recaptchaCallback() {
     grecaptcha.render('robot', {
-        'sitekey': '6Le3RpIpAAAAACE-KoXys_sbtG9UnB8O1WfaIeDq',
+        'sitekey': '6Lc8spcpAAAAAFzbEYYcoC6AVnqz8mTJGXevFtUm',
         'theme': 'light',
         'size': 'compact',
         'callback': callback,
