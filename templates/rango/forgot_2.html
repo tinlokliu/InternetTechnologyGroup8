@@ -1,13 +1,17 @@
+{% load static %}
+{#{% debug %}#}
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <
-    <title>forgot-2</title>
+<html style="font-size: 16px;" lang="en">
+<head>
+
+    <title>resetPassword</title>
     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
-<link rel="stylesheet" href="{% static 'css/forgot_2.css' %}" media="screen">
-    <script class="u-script" type="text/javascript" src="{% static 'css/forgot_2.css' %}" defer=""></script>
+    <link rel="stylesheet" href="{% static 'css/forgot_2.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/forgot_2.js' %}" defer=""></script>
     <script src="{% static 'js/forgot_2.js' %}"></script>
 
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -15,52 +19,90 @@
 }</script>
 
 </head>
-  <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8216"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
-    <section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca" >
-      <!-- data-href="https://nicepage.com" -->
-      <div class="u-clearfix u-sheet u-sheet-1">
+<body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en">
+<header class="u-clearfix u-header u-header" id="sec-8216">
+    <div class="u-clearfix u-sheet u-sheet-1"></div>
+</header>
+<section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca">
+
+    <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1"></div>
+            <div class="u-repeater u-repeater-1"></div>
         </div>
         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"></div>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-form u-form-1">
-                    <form class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
-                      <p class="u-form-group u-form-text u-text u-text-1"> Create a new password</p>
-                      <div class="u-form-group u-form-group-2">
-                        <label for="text-195d" class="u-label">New password*</label>
-                        <input type="text" placeholder="" id="text-195d" name="text-1" class="u-input u-input-rectangle">
-                      </div>
-                      <div class="u-form-group u-form-group-3">
-                        <label for="text-a82a" class="u-label">Confirm password</label>
-                        <input type="text" placeholder="" id="text-a82a" name="text" class="u-input u-input-rectangle">
-                      </div>
-                      <div class="u-align-center u-form-group u-form-submit">
-                        <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">Reset my password</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <div class="u-image u-im    age-circle u-preserve-proportions u-image-1" alt=""
+                                 data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn"
+                                 data-animation-duration="2000" data-animation-delay="0"></div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                        
+                            {% if uidb64 and token %}
+                                UIDB64: {{ uidb64 }}
+                                Token: {{ token }}
 
-</body></html>
+                                <form action="{% url 'rango:password_reset_confirm' uidb64=uidb64 token=token %}"
+                                      method="post"
+                                      class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email"
+                                      name="form" style="padding: 30px;">
+                                    {% csrf_token %}
+                                    <p class="u-form-group u-form-text u-text u-text-1"> Create a new password</p>
+                                    <div class="u-form-group u-form-group-2">
+                                        <label for="new_password1" class="u-label">New password*</label>
+                                        <input type="password" placeholder="Please enter a new password"
+                                               id="new_password1"
+                                               name="new_password1" class="u-input u-input-rectangle">
+                                        {% if form.new_password1.errors %}
+                                            <div class="alert alert-danger" role="alert">
+                                                {{ form.new_password1.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="u-form-group u-form-group-3">
+                                        <label for="new_password2" class="u-label">Confirm password</label>
+                                        <input type="password" placeholder="Confirm new password" id="new_password2"
+                                               name="new_password2"
+                                               class="u-input u-input-rectangle">
+                                        {% if form.new_password2.errors %}
+                                            <div class="alert alert-danger" role="alert">
+                                                {{ form.new_password2.errors }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="u-align-center u-form-group u-form-submit">
+                                        <button type="submit"
+                                                class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">
+                                            Reset my password
+                                        </button>
+                                    </div>
+                                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has
+                                        been sent.
+                                    </div>
+                                    <div class="u-form-send-error u-form-send-message"> Unable to send your message.
+                                        Please fix errors then try again.
+                                    </div>
+                                    <input type="hidden" value="" name="recaptchaResponse">
+                                    <input type="hidden" name="formServices"
+                                           value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
+                                </form>
+                            {% else %}
+                                <p>Error: UIDB64 or Token is missing.</p>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+</body>
+</html>

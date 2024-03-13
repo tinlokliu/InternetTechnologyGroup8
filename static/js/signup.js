@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function createErrorMessage(input, message) {
         const error = input.nextElementSibling;
         error.innerText = message;
-        error.style.display = 'block'; // 显示错误消息
+        error.style.display = 'block';
       }
 
       function removeErrorMessage(input) {
         const error = input.nextElementSibling;
-        error.style.display = 'none'; // 隐藏错误消息
+        error.style.display = 'none'; // Hide error message
       }
   
     inputs.forEach(input => {
@@ -47,17 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     var callback = function (args) {
         console.log(args);
-        console.log('验证成功');
+        console.log('successful authentication');
     };
 
     var expiredCallback = function (args) {
         console.log(args);
-        console.log('验证过期');
+        console.log('Validation expiration\n' +
+            '\n');
     };
 
     var errorCallback = function (args) {
         console.log(args);
-        console.log('验证失败');
+        console.log('authentication failed');
     };
     function recaptchaCallback() {
     grecaptcha.render('robot', {

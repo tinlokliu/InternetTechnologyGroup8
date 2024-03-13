@@ -1,88 +1,119 @@
 {% load static %}
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-   
+<html style="font-size: 16px;" lang="en">
+<head>
+
     <title>Forgotten</title>
     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
-<link rel="stylesheet" href="{% static 'css/forgot.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/forgot.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="page.js" defer=""></script>
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": ""
 }</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      var emailInput = document.getElementById('email-eb97');
-      emailInput.addEventListener('blur', function() {
-          var errorMessage = document.createElement('div');
-          errorMessage.style.color = 'red';
-          var emailValue = emailInput.value;
-          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          var errorElement = emailInput.nextElementSibling;
-  
-          // 移除之前的错误消息
-          if (errorElement) {
-              emailInput.parentNode.removeChild(errorElement);
-          }
-  
-          // 验证邮箱是否为空或格式不正确
-          if (!emailValue) {
-              errorMessage.textContent = 'Please enter your email address.';
-              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
-          } else if (!emailPattern.test(emailValue)) {
-              errorMessage.textContent = 'Please enter a valid email address.';
-              emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
-          }
-      });
-  });
-  </script>
-  </head>
-  <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8216"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
-    <section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca" >
-      <div class="u-clearfix u-sheet u-sheet-1">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var emailInput = document.getElementById('email-eb97');
+            emailInput.addEventListener('blur', function () {
+                var errorMessage = document.createElement('div');
+                errorMessage.style.color = 'red';
+                var emailValue = emailInput.value;
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var errorElement = emailInput.nextElementSibling;
+
+                // remove wrong message before
+                if (errorElement) {
+                    emailInput.parentNode.removeChild(errorElement);
+                }
+
+                // Verify that the mailbox is empty or incorrectly formatted
+                if (!emailValue) {
+                    errorMessage.textContent = 'Please enter your email address1.';
+                    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+                } else if (!emailPattern.test(emailValue)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+                }
+            });
+        });
+    </script>
+</head>
+<body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="en">
+<header class="u-clearfix u-header u-header" id="sec-8216">
+    <div class="u-clearfix u-sheet u-sheet-1"></div>
+</header>
+<section class="u-clearfix u-lightbox u-section-1" id="sec-f3ca">
+    <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1"></div>
+            <div class="u-repeater u-repeater-1"></div>
         </div>
         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"></div>
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt=""
+                                 data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn"
+                                 data-animation-duration="2000" data-animation-delay="0"></div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <div class="u-form u-form-1">
+                                <form method="post" action="{% url 'rango:password_reset' %}"
+                                      class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email"
+                                      name="form" style="padding: 30px;">
+                                    {% csrf_token %}
+                                    <p class="u-form-group u-form-text u-text u-text-1"> Forgotten your password? </p>
+                                    <p class="u-form-group u-form-text u-text u-text-2"> No problem. Simply add your
+                                        email address below (make sure you use the one you signed up with) and we'll
+                                        send you a link to reset your password. </p>
+                                    <div class="u-form-email u-form-group u-form-group-3">
+                                        <label for="email-eb97" class="u-label">Email*</label>
+                                        <input type="email" placeholder="Enter a valid email address" id="email-eb97"
+                                               name="email" class="u-input u-input-rectangle" required="">
+                                    </div>
+                                    <div class="u-align-center u-form-group u-form-submit">
+                                        <button type="submit"
+                                                class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">
+                                            Reset my password
+                                        </button>
+                                        <input type="submit" value="submit" class="u-form-control-hidden">
+                                    </div>
+                                    {% if form.email.errors %}
+                                        <div class="alert alert-danger" role="alert">
+                                            {% for error in form.email.errors %}
+                                                <p>{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                    {% for message in messages %}
+                                        <div class="alert {{ message.tags }}">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has
+                                        been sent.
+                                    </div>
+                                    <div class="u-form-send-error u-form-send-message"> Unable to send your message.
+                                        Please fix errors then try again.
+                                    </div>
+                                    <input type="hidden" value="" name="recaptchaResponse">
+                                    <input type="hidden" name="formServices"
+                                           value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <div class="u-form u-form-1">
-                    <form  class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
-                      <p class="u-form-group u-form-text u-text u-text-1"> Forgotten your password? </p>
-                      <p class="u-form-group u-form-text u-text u-text-2"> No problem. Simply add your email address below (make sure you use the one you signed up with) and we'll send you a link to reset your password. </p>
-                      <div class="u-form-email u-form-group u-form-group-3">
-                        <label for="email-eb97" class="u-label">Email*</label>
-                        <input type="email" placeholder="Enter a valid email address" id="email-eb97" name="email" class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-align-center u-form-group u-form-submit">
-                        <a href="{% url 'rango:forgot_1' %}" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-3-light-1 u-radius u-btn-1">Reset my password </a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="c83941b3-042b-05f2-c4d8-2e12d91c8a01">
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    
-    
-    
-  
-  
-</body></html>
+    </div>
+</section>
+
+
+</body>
+</html>

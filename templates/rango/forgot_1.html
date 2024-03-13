@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>forgot1</title>
+    <title>waitForEmail</title>
     <link rel="stylesheet" href="{% static 'css/page.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/forgot_1.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/page.js' %}" defer=""></script>
@@ -37,7 +37,7 @@
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">
                   <div class="u-form u-form-1">
-                    <form class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
+                    <form  action="{% url 'rango:password_reset_done' %}" class="u-clearfix u-form-spacing-35 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
                       <p class="u-form-group u-form-text u-text u-text-1"> Forgotten your password? </p>
                       <p class="u-form-group u-form-text u-text u-text-2"> You should receive an email in a few minutes, asking you to reset your password. If you don't receive it, double-check your email address and&nbsp;try again</p>
                       <div class="u-align-center u-form-group u-form-submit">
