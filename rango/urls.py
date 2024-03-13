@@ -3,7 +3,7 @@ from rango import views
 from rango.views import ask_openai
 from . import views
 
-app_name ='rango'
+app_name ='rango' 
 
 urlpatterns = [
     path('', views.welcome, name='welcome'),
