@@ -254,7 +254,7 @@ header {
     font-family: "Molengo", sans-serif;
 }
 .boxnamezi{
-    width: 400px;
+    width: 380px;
     height: 130px;
     /*background-color: blueviolet;*/
     float: left;
@@ -290,7 +290,7 @@ header {
     height: 550px;
     /*background-color: blue;*/
     margin: auto;
-
+    /*overflow-y: auto;*/
 }
 
 .zhuti1{
@@ -300,6 +300,7 @@ header {
     margin-top: 30px;
     border: 2px solid #a9a9a9;
     border-radius: 20px;
+    overflow-y: auto;
 }
 .INGREDIENTS{
     font-size: 20px;
@@ -335,6 +336,7 @@ header {
     border-left: 2px solid #a9a9a9;
     padding-top: 25px;
     border-radius: 20px;
+    overflow-y: auto;
 }
 
 .dibu{
