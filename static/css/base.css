@@ -2,7 +2,7 @@
 
 .navbar {
     padding-bottom: 2.5rem;
-   padding-right: 20px;
+    padding-right: 20px;
     /*margin-left: 80px;*/
 }
 
@@ -25,16 +25,16 @@
     font-family: "Molengo";
     font-weight: 800;
     color: #000000;
-  
+
 }
 
 .nav-link:hover {
-    color: #007F47; 
+    color: #007F47;
 }
 
 
 .heart-icon {
-    height: 30px; 
+    height: 30px;
     /* padding-right: 14px */
 }
 
@@ -75,24 +75,22 @@
     display: inline-block;
 }
 
+#chefbot-icon {
+    position: fixed;
+    bottom: -130px;
+    right: -140px;
+    transform: scale(0.12); 
+    cursor: pointer; 
+    z-index: 1000;
+}
 
-
-/* .profile-icon {
-    padding: 0 8px 0px 3px;
-} */
-
-
-
-/* .nav-link img {
-    width: 5px; 
-    height: 5px; 
-    vertical-align: middle; 
-    margin-right: 0.2em; 
-} */
-
-/* .heart-icon {
-    width: 5px; 
-    height: 5px; 
-} */
-
+#chefbot-textbox {
+    position: fixed;
+    bottom: -80px;
+    right: -100px;
+    transform: scale(0.55);
+    display: none;
+    margin-bottom: 90px;
+    z-index: 1000;
+}
 
