@@ -10,7 +10,7 @@ h1 {
     line-height: 1.1;
     padding-top: 50px;
     padding-bottom: 20px;
-    color: #007F47; /* Keep h1 color as is */
+    color: #007F47; 
 }
 
 h3 {
@@ -19,7 +19,7 @@ h3 {
     line-height: 1.1;
     padding-top: 50px;
     padding-bottom: 20px;
-    color: #ffffff; /* Keep h3 color as white */
+    color: #ffffff; 
 }
 
 p {
@@ -30,11 +30,11 @@ p {
 }
 
 #story p {
-    color: black; /* Set paragraph text color in the "story" section to black */
+    color: black; 
 }
 
 #statistics p {
-    color: #ffffff; /* Set paragraph text color in the "statistics" section to white */
+    color: #ffffff; 
 }
 
 #statistics {

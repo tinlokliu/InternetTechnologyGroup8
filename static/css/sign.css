@@ -70,20 +70,14 @@
   padding: 10px 147px 10px 145px;
 }
 .u-section-1 .g-recaptcha {
-  margin-top: 20px; /* 调整与上方元素的间距 */
-  margin-bottom: 24px; /* 调整与下方按钮的间距 */
+  margin-top: 20px; 
+  margin-bottom: 24px; 
   margin-left: 40px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1199px) { 
   .u-section-1 .u-sheet-1 {
     min-height: 658px;
-  }
-
-  .u-section-1 .u-repeater-1 {
-    grid-auto-columns: NaN%;
-    grid-template-columns: repeat(undefined, NaN%);
-    min-height: NaNpx;
   }
 
   .u-section-1 .u-layout-cell-1 {

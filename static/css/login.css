@@ -82,13 +82,7 @@
   .u-section-1 .u-sheet-1 {
     min-height: 658px;
   }
-
-  /* .u-section-1 .u-repeater-1 {
-    grid-auto-columns: NaN%;
-    grid-template-columns: repeat(undefined, NaN%);
-    min-height: NaNpx;
-  } */
-
+  
   .u-section-1 .u-layout-cell-1 {
     min-height: 514px;
   }

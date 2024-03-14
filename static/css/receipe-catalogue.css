@@ -3,10 +3,10 @@
 .search-container {
 
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 0px; /* Adjust as needed */
+    margin-top: 0px; 
     margin-bottom: 0px;
     background-color: #ffffff;
     height: 100px;
@@ -17,12 +17,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    /* Make the search bar span the entire width */
 }
 
 .search__input {
     width: 350px;
-    /* Make the input take up remaining space */
     font-family: inherit;
     font-size: inherit;
     background-color: #f4f2f2;
@@ -33,14 +31,10 @@
     transition: all ease-in-out .5s;
 }
 
-
-
-
 .search__button {
     border: none;
     background-color: #f4f2f2;
     margin-left: -3rem;
-    /* Adjust the margin to overlap the button with the input */
 }
 
 .search__icon {
@@ -74,35 +68,32 @@
     cursor: pointer;
 }
 
-
-
-
 /* Dropdown filter */
 .filter-dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 10px; /* Adjust spacing */
+    margin-left: 10px; 
 }
 
 .filter {
     width: 50px;
     height: 50px;
     margin-left: 5px;
-    border-radius: 50%; /* Make it round */
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none; /* Remove border */
+    border: none; 
     cursor: pointer;
-    background-color: #f4f2f2; /* Change background color */
-    color: white; /* Change text color */
-    font-size: 1.2rem; /* Adjust font size */
+    background-color: #f4f2f2; 
+    color: white; 
+    font-size: 1.2rem; 
     transition: all 0.3s;
-    position: relative; /* Add this line */
+    position: relative; 
 }
 
 .filter:hover {
-    background-color: #043b23; /* Darken background color */
+    background-color: #043b23; 
 }
 
 .filter:hover svg {
@@ -117,7 +108,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 10px;
-    border-radius: 10px; /* Add border radius */
+    border-radius: 10px; 
 }
 
 .dropdown-content label {
@@ -133,15 +124,6 @@
 .filter-dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-  
-  
-
-
-
-
-
 
 /* View All Receipes */
 
