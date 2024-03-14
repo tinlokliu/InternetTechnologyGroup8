@@ -45,19 +45,10 @@ class RangoAppTests(TestCase):
         # Adjust the redirect check based on your view logic
         self.assertRedirects(response, reverse('rango:login'))
 
-    # def test_ask_openai_view_method_not_allowed(self):
-    #     response = self.client.get(reverse('rango:ask_openai_view'))
-    #     self.assertEqual(response.status_code, 405)
-
     def create_user_and_login(self):
         user = User.objects.create_user(username='testuser', password='12345')
         self.client.login(username='testuser', password='12345')
         return user
-
-    # def test_protected_view_access_without_login(self):
-    #     response = self.client.get(reverse('rango:profile'))
-    #     # Assuming you redirect unauthenticated users to the login page
-    #     self.assertRedirects(response, f"{reverse('rango:login')}?next={reverse('rango:signup')}")
 
     def test_protected_view_access_with_login(self):
         self.create_user_and_login()
